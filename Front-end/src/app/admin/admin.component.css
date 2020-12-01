@@ -1,0 +1,15 @@
+table {
+  font-family: monospace !important;
+}
+
+:host ::ng-deep .datepicker {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+/* :host .toast {
+  z-index: 1100 !important;
+} */
+:host ::ng-deep .datepicker input {
+  width: 90%;
+}
