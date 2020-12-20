@@ -6,10 +6,16 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const multer = require('multer');
 
-const eventRoutes = require('./routes/event');
-const foodRoutes = require('./routes/food');
+const productRoutes = require('./routes/product');
 
 const app = express();
+
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+});
 
 const fileStorage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -30,24 +36,20 @@ const fileFilter = (req, file, cb) => {
     }
 };
 
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
-});
-
 app.use(bodyParser.json()); // application/json
 
-app.use(multer({ storage: fileStorage, fileFilter: fileFilter }).single('image'));
+app.use(multer({ storage: fileStorage, fileFilter: fileFilter }).fields([
+    { name: 'image1Url', maxCount: 1},
+    { name: 'image2Url', maxCount: 1},
+    { name: 'image3Url', maxCount: 1}
+]));
 
 app.use('/home/termjzsq/webSite/images/', express.static(path.join(__dirname, 'images')));
 
-app.use(express.static(path.join(__dirname, '/Front-end/dist/termeh')));
+app.use(express.static(path.join(__dirname, '/Front-end/dist/rosenfarbe')));
 
-app.use('/event', eventRoutes);
-app.use('/food', foodRoutes);
-app.get('/*', (req, res) => res.sendFile(__dirname + '/Front-end/dist/termeh/index.html'));
+app.use('/product', productRoutes);
+app.get('/*', (req, res) => res.sendFile(__dirname + '/Front-end/dist/rosenfarbe/index.html'));
 
 app.use((error, req, res, next) => {
     console.log(error);
@@ -58,11 +60,12 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-    .connect('mongodb+srv://AriyanGeek:19970622++@termeh-restaurant-ncyo7.azure.mongodb.net/test?retryWrites=true', {
+    .connect('mongodb+srv://AriyanGeek:19970622++@cluster0.mwb96.mongodb.net/rosenfarbe?retryWrites=true', {
         useNewUrlParser: true,
     })
     .then((result) => {
         console.log(result);
-        app.listen();
+        app.listen('3000');
     })
-    .catch((err) => console.log(err));
+    .catch((err) => console.log(err)
+    );
