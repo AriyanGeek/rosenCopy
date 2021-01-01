@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
   }
   getProducts() {
     this.http
-      .get('http://localhost:3000/product/products')
+      .get('http://rosenfarbe.com/product/products')
       .subscribe((responseData) => {
         this.products = Object(responseData).products;
         console.log(this.products);
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
   }
   delete(product) {
     this.http
-      .delete('http://localhost:3000/product/product/' + product._id)
+      .delete('http://rosenfarbe.com/product/product/' + product._id)
       .subscribe((responseData) => {
         console.log(responseData);
         this.showSuccessOnDeleteing();
@@ -83,7 +83,7 @@ export class LoginComponent implements OnInit {
     //   console.log(key + ':' + value);
     // });
     // https://termehproduct.com
-    this.http.post('http://localhost:3000/product/product', formData).subscribe(
+    this.http.post('http://rosenfarbe.com/product/product', formData).subscribe(
       (responseData) => {
         if (Object(responseData).status === 201) {
           console.log(201);
@@ -102,7 +102,7 @@ export class LoginComponent implements OnInit {
     this.localId = id;
     let product;
     this.http
-      .get('http://localhost:3000/product/product/' + id)
+      .get('http://rosenfarbe.com/product/product/' + id)
       .subscribe((responseData) => {
         product = Object(responseData).product;
         console.log(product);
@@ -134,7 +134,7 @@ export class LoginComponent implements OnInit {
     formData.append('image2Url', this.image2);
     formData.append('image3Url', this.image3);
     this.http
-      .put('http://localhost:3000/product/product/' + this.localId, formData)
+      .put('http://rosenfarbe.com/product/product/' + this.localId, formData)
       .subscribe(
         (responseData) => {
           console.log(Object(responseData).product);

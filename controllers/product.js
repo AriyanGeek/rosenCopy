@@ -157,7 +157,13 @@ exports.deleteProduct = (req, res, next) => {
                 throw error;
             }
             // Check logged in user
-            clearImage(product.imageUrl);
+            clearImage(product.image1Url);
+            if(product.image2Url){
+                clearImage(product.image2Url);
+            }
+            if(product.image3Url){
+                clearImage(product.image3Url);
+            }
             return Product.findByIdAndRemove(productId);
         })
         .then(() => {
