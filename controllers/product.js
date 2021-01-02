@@ -47,7 +47,7 @@ exports.createProduct = (req, res, next) => {
         error.statusCode = 422;
         throw error;
     }
-    if (!req.file) {
+    if (!req.file[0]) {
         const error = new Error('No image provided.');
         error.statusCode = 422;
         throw error;
@@ -60,7 +60,9 @@ exports.createProduct = (req, res, next) => {
     const content = req.body.content;
     const contentDe = req.body.contentDe;
     const contentFr = req.body.contentFr;
-    const image1Url = req.file.path;
+    const image1Url = req.file[0].path;
+    const image2Url = req.file[1].path;
+    const image3Url = req.file[2].path;
     const product = new Product({
         name: name,
         nameDe: nameDe,
@@ -71,6 +73,8 @@ exports.createProduct = (req, res, next) => {
         contentDe: contentDe,
         contentFr: contentFr,
         image1Url: image1Url,
+        image2Url: image2Url,
+        image3Url: image3Url,
 
     });
     product.save()
@@ -105,12 +109,30 @@ exports.updateProduct = (req, res, next) => {
     const content = req.body.content;
     const contentDe = req.body.contentDe;
     const contentFr = req.body.contentFr;
-    let imageUrl = req.body.image;
-    if (req.file) {
-        imageUrl = req.file.path;
+    let image1Url = req.body.image;
+    let image2Url = req.body.image2;
+    let image3Url = req.body.image3;
+    if (req.file[0]) {
+        image1Url = req.file.path;
     }
-    if (!imageUrl) {
-        const error = new Error('No file picked.');
+    if (!image1Url) {
+        const error = new Error('No file picked.1');
+        error.statusCode = 422;
+        throw error;
+    }
+    if (req.file[1]) {
+        image1Url = req.file.path;
+    }
+    if (!image2Url) {
+        const error = new Error('No file picked.2');
+        error.statusCode = 422;
+        throw error;
+    }
+    if (req.file[2]) {
+        image1Url = req.file.path;
+    }
+    if (!image3Url) {
+        const error = new Error('No file picked.3');
         error.statusCode = 422;
         throw error;
     }
@@ -122,8 +144,14 @@ exports.updateProduct = (req, res, next) => {
                 throw error;
             }
 
-            if (imageUrl !== product.imageUrl) {
-                clearImage(product.imageUrl);
+            if (image1Url !== product.image1Url) {
+                clearImage(product.image1Url);
+            }
+            if (image2Url !== product.image2Url) {
+                clearImage(product.image2Url);
+            }
+            if (image3Url !== product.image3Url) {
+                clearImage(product.image3Url);
             }
             product.name = name;
             product.nameDe = nameDe;
@@ -133,7 +161,9 @@ exports.updateProduct = (req, res, next) => {
             product.contentDe = contentDe;
             product.contentFr = contentFr;
             product.link = link;
-            product.imageUrl = imageUrl;
+            product.image1Url = image1Url;
+            product.image2Url = image2Url;
+            product.image3Url = image3Url;
             return product.save();
         })
         .then((result) => {
@@ -180,5 +210,5 @@ exports.deleteProduct = (req, res, next) => {
 const clearImage = (filePath) => {
     // eslint-disable-next-line no-undef
     filePath = path.join(__dirname, '..', filePath);
-    fs.unlink(filePath, (err) => console.log(err));
+    fs.unlink(filePath, (err) => console.log('clearImage : ' + err));
 };

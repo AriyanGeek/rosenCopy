@@ -20,12 +20,12 @@ export class LoginComponent implements OnInit {
     content: '',
     contentDe: '',
     contentFr: '',
-    image: '',
+    image1: '',
     image2: '',
     image3: '',
   };
   products;
-  image: File | null;
+  image1: File | null;
   image2: File | null;
   image3: File | null;
   loggedIn = false;
@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
       });
   }
   getFile(event) {
-    this.image = event.target.files[0];
+    this.image1 = event.target.files[0];
   }
   getFile2(event) {
     this.image2 = event.target.files[0];
@@ -75,7 +75,7 @@ export class LoginComponent implements OnInit {
     formData.append('contentDe', this.product.contentDe);
     formData.append('contentFr', this.product.contentFr);
     formData.append('link', this.product.link);
-    formData.append('imageUrl', this.image);
+    formData.append('image1Url', this.image1);
     formData.append('image2Url', this.image2);
     formData.append('image3Url', this.image3);
 
@@ -115,7 +115,7 @@ export class LoginComponent implements OnInit {
         this.product.contentFr = product.contentFr;
         this.product.price = product.price;
         this.product.link = product.link;
-        this.product.image = product.imageUrl;
+        this.product.image1 = product.image1Url;
         this.product.image2 = product.image2Url;
         this.product.image3 = product.image3Url;
       });
@@ -130,7 +130,7 @@ export class LoginComponent implements OnInit {
     formData.append('contentDe', this.product.contentDe);
     formData.append('contentFr', this.product.contentFr);
     formData.append('link', this.product.link);
-    formData.append('imageUrl', this.image);
+    formData.append('image1Url', this.image1);
     formData.append('image2Url', this.image2);
     formData.append('image3Url', this.image3);
     this.http
