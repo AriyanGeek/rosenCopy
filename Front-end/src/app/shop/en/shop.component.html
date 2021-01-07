@@ -1,1 +1,372 @@
-<p>shop works!</p>
+<!-- ======= Header ======= -->
+<header id="headerFix" class="fixed-top d-flex align-items-center">
+  <!-- big screen nav -->
+  <div class="container-fluid align-items-center d-none d-md-flex">
+    <div class="logo ml-2 mr-3">
+      <a href="index.html">
+        <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class=" img-fluid">
+      </a>
+    </div>
+
+    <nav class="nav-menu" style="width: inherit;">
+      <ul>
+        <li><a routerLink="/en">Home</a></li>
+        <li><a routerLink="/en/rosenfarbe">Rosenfarbe</a></li>
+        <li class="active"><a href="">Shop</a></li>
+        <li><a routerLink="/en/b2b">Products</a></li>
+        <li><a routerLink="/en/contact">Contact</a></li>
+
+        <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+          <ng-template pTemplate="selectedItem">
+            <img src="../../../assets/img/EN.png" style="height: 20px;width: 20px;" />
+          </ng-template>
+          <ng-template let-lang pTemplate="item">
+            <div class="lang-item" >
+                  <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+
+                </div>
+          </ng-template>
+        </p-dropdown>
+      </ul>
+    </nav>
+  </div>
+  <!-- small screen nav -->
+  <div class="col-12 d-block d-md-none text-center">
+
+    <button pButton pRipple type="button" (click)="visibleSidebar = true" icon="pi pi-bars" style="background-color: transparent;color: #AF854F;border-color: #AF854F;float: left;"></button>
+    <p-sidebar [(visible)]="visibleSidebar" [modal]="false">
+      <h1 style="font-weight:normal;color: #03072A;">Rosenfarbe</h1>
+      <button pButton pRipple routerLink="/en" type="button" label="Home" class="p-button-text d-block mt-1"></button>
+      <button pButton pRipple routerLink="/en/rosenfarbe" type="button" label="Rosenfarbe" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/en/shop" type="button" label="Shop" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/en/b2b" type="button" label="Products" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/en/contact" type="button" label="Contact" class="p-button-text d-block"></button>
+
+      <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="img-fluid mt-4">
+
+    </p-sidebar>
+    <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="mx-auto img-fluid" style="height: 45px;margin-left: 20px !important;">
+    <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+      <ng-template pTemplate="selectedItem">
+        <img src="../../../assets/img/EN.png" style="height: 20px;width: 20px;" />
+      </ng-template>
+      <ng-template let-lang pTemplate="item">
+        <div class="lang-item" >
+              <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+
+            </div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+</header>
+<!-- End Header -->
+<div class="section-8 box">
+  <div class="vertical-center text-center" style="position: relative;">
+    <h2 class="display-4" style="font-size: 90px;">Shop</h2>
+  </div>
+</div>
+<div class="container-fluid text-center" style="background-color: #56433F; color: #E0E0E0;font-family: 'Marcellus SC', serif;">
+  <div class="row">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10 mt-5 pt-5">
+      <p class="p-text">You can order nuts of excellent quality directly in our shop.</p>
+      <p class="p-text">Quality promise:</p>
+      <p class="p-text">All pistachios of Rosenfarbe are exclusively super long. This type offers the optimal distribution of the ingredients during the roasting process and ensures that the shell is particularly easy to open before consumption.</p>
+      <p class="p-text">All nuts and ingredients are selected personally by us. Thanks to our high quality standards, every single product that leaves his home roastery deserves the label 'Hand Selected'.</p>
+      <p class="p-text"> Just Rosenfarbe.</p>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-12">
+      <hr style="border-top: 2px solid #E0E0E0;">
+    </div>
+    <div class="col-md-6">
+      <img src="../../../assets/img/c1.jpg" alt="" width="100%" onmouseover="hover1(this);" onmouseout="unhover1(this);">
+    </div>
+    <div class="col-md-6" id="p1">
+      <h1>Pistachios<br>saffron</h1>
+      <p class="p-text">Pistachio kisses saffron.</p>
+      <p class="p-text">Our exquisite pistachios are gently roasted with saffron, the gold of spices.</p>
+      <p class="p-text">The flavours created by this fusion of excellence caress your taste buds in such a unique way that words are far too weak to do justice to the experience. It is best to serve our pistachios with saffron to an equally exquisite whiskey. We import the saffron for our pistachios directly from a producer in the province of Khorasan in the northeastern of Iran.</p>
+      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Temporarily unavailable" data-content="Shop is being developed and will be available soon">Buy</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal1" style="color: #E0E0E0;">More Info</a>
+      <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pistachios with Saffron</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Net Weight: 250g</p><br>
+
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td style="text-align: left;">Nutritional values</td>
+                    <td style="text-align: right;">per 100g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Energy value</td>
+                    <td style="text-align: right;">2635.9 kJ/630 kcal</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Fat</td>
+                    <td style="text-align: right;">48.5 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- of which saturated</td>
+                    <td style="text-align: right;">6.1 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Carbohydrates</td>
+                    <td style="text-align: right;">27.1 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- of which sugar</td>
+                    <td style="text-align: right;">6.8 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Protein</td>
+                    <td style="text-align: right;">21.2 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Salt</td>
+                    <td style="text-align: right;">2 g</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>Ingredients: pistachios in shell 98%, sea salt 2%, saffron extract 2%</p>
+              <p>Note for allergic persons: The product may contain traces of other nuts</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <hr style="border-top: 2px solid #E0E0E0;">
+    </div>
+    <div class="col-md-6" id="p3">
+      <h1>Pistachios<br>lemon</h1>
+      <p class="p-text">Spicy, tangy and refreshing.<br>This is how connoisseurs describe our pistachios with lemon. This milestone of pleasure, lovingly handcrafted in our private roastery, goes well with a gin and tonic.<br>Unforgettable! </p>
+      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Temporarily unavailable" data-content="Shop is being developed and will be available soon">Buy</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal2" style="color: #E0E0E0;">More Info</a>
+      <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pistachios with Lemon</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Net Weight: 250g</p><br>
+
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td style="text-align: left;">Nutritional values</td>
+                    <td style="text-align: right;">Per 100g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Energy value</td>
+                    <td style="text-align: right;">2635.9 kJ/630 kcal</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Fat</td>
+                    <td style="text-align: right;">48.5 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- of which saturated fat</td>
+                    <td style="text-align: right;">6.1 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Carbohydrates</td>
+                    <td style="text-align: right;">27.1 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- of which sugar</td>
+                    <td style="text-align: right;">6.8 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Protein</td>
+                    <td style="text-align: right;">21.2 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Salt</td>
+                    <td style="text-align: right;">2 g</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>Ingredients: pistachios in shell 96%, sea salt 2%, lemon extract 2%</p>
+              <p>Note for allergic persons: The product may contain traces of other nuts</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="../../../assets/img/c3.jpg" alt="" width="100%" onmouseover="hover3(this);" onmouseout="unhover3(this);">
+    </div>
+    <div class="col-12">
+      <hr style="border-top: 2px solid #E0E0E0;">
+    </div>
+    <div class="col-md-6">
+      <img src="../../../assets/img/c2.jpg" alt="" width="100%" onmouseover="hover2(this);" onmouseout="unhover2(this);">
+    </div>
+    <div class="col-md-6" id="p2">
+      <h1>Pistachios<br>pink salt</h1>
+      <p class="p-text">The meeting of the gentle giants. <br>In this composition, the unique taste of our giant Persian pistachios meets the originally mineral salt of the Himalayan mountains fused together in precise roasting. </p>
+      <p class="p-text"></p>
+      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Temporarily unavailable" data-content="Shop is being developed and will be available soon">Buy</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal3" style="color: #E0E0E0;">More Info</a>
+      <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Salted Pistachios</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Net Weight: 250g</p><br>
+
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td style="text-align: left;">Nutritional values</td>
+                    <td style="text-align: right;">Per 100g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Energy value</td>
+                    <td style="text-align: right;">2635.9 kJ/630 kcal</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Fat</td>
+                    <td style="text-align: right;">48.5 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- of which saturated fat</td>
+                    <td style="text-align: right;">6.1 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Carbohydrates</td>
+                    <td style="text-align: right;">27.1 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- of which sugar</td>
+                    <td style="text-align: right;">6.8 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Protein</td>
+                    <td style="text-align: right;">21.2 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Salt</td>
+                    <td style="text-align: right;">2 g</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>Ingredients: pistachios in shell 98%, pink salt 2%</p>
+              <p>Note for allergic persons: The product may contain traces of other nuts</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <hr style="border-top: 2px solid #E0E0E0;">
+    </div>
+    <div class="col-md-6" id="p4">
+      <h1>Nuts mix<br>sea salt</h1>
+      <p class="p-text">Salted variety.</p>
+      <p class="p-text">The nuts in this creation come from all over the world. Persian pistachio kernels, Vietnamese cashews, Spanish almonds, Georgian hazelnuts and South African macadamia combined through the power of roasting and refined with sea salt.</p>
+      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Temporarily unavailable" data-content="Shop is being developed and will be available soon">Buy</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal4" style="color: #E0E0E0;">More Info</a>
+      <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Nuts Mix</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Net Weight: 250g</p><br>
+
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td style="text-align: left;">Nutritional values</td>
+                    <td style="text-align: right;">Per 100g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Energy value</td>
+                    <td style="text-align: right;">2719.6 kJ/650 kcal</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Fat</td>
+                    <td style="text-align: right;">54.2 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- of which saturated</td>
+                    <td style="text-align: right;">5.5 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Carbohydrates</td>
+                    <td style="text-align: right;">21 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- of which sugar</td>
+                    <td style="text-align: right;">5 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Protein</td>
+                    <td style="text-align: right;">19.6 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Salt</td>
+                    <td style="text-align: right;">1.5 g</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>Ingredients: Nut mix with different weight proportions consisting of pistachio kernels, cashew nuts, almonds, hazelnuts and walnuts, sea salt 1.5%</p>
+              <p>Note for allergic persons: The product may contain traces of other nuts</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="../../../assets/img/c4.jpg" alt="" width="100%" onmouseover="hover4(this);" onmouseout="unhover4(this);">
+    </div>
+    <div class="col-12">
+      <hr style="border-top: 2px solid #E0E0E0;">
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

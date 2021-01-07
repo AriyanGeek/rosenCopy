@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-b2b-de',
@@ -6,10 +8,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./b2b-de.component.css']
 })
 export class B2bDeComponent implements OnInit {
+  visibleSidebar;
+  langs = ['EN','DE','FR'];
+  selectedLang: string;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private meta: Meta,
+    private title: Title
+  ) {
+    this.meta.updateTag(
+      {
+        name: 'description',
+        content: '',
+      }
+    );
+    this.setTitle('Home');
+    this.selectedLang = 'DE';
 
-  ngOnInit(): void {
   }
 
+  ngOnInit(): void {}
+  setTitle(newTitle: string) {
+    this.title.setTitle(newTitle);
+  }
+  onIndexChange(event) {
+    console.log(event);
+  }
+  changeLang(){
+    this.router.navigate(['/' + (this.selectedLang.toLowerCase())]);
+  }
 }
+
+

@@ -1,66 +1,69 @@
-<div class="section-1 box">
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md sticky-top mynav">
-        <div class="container-fluid p-2">
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+  <!-- big screen nav -->
+  <div class="container-fluid align-items-center d-none d-md-flex">
+    <div class="logo ml-2 mr-3">
+      <a href="index.html">
+        <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class=" img-fluid">
+      </a>
+    </div>
 
-          <a href="index.html"><img class="navbar-brand mr-3" src="../../../assets/img/logo1.png" width="70px" height="80px" alt="" loading="lazy" class=""  style="display: block; margin-left: auto; margin-right: auto;"></a>
+    <nav class="nav-menu" style="width: inherit;">
+      <ul>
+        <li class="active"><a href="">Home</a></li>
+        <li><a routerLink="/fr/rosenfarbe">Rosenfarbe</a></li>
+        <li><a routerLink="/fr/shop">Shop</a></li>
+        <li><a routerLink="/fr/b2b">Produits</a></li>
+        <li><a routerLink="/fr/contact">Contact</a></li>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+          <ng-template pTemplate="selectedItem">
+            <img src="../../../assets/img/FR.png" style="height: 20px;width: 20px;" />
+          </ng-template>
+          <ng-template let-lang pTemplate="item">
+            <div class="lang-item" >
+                  <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="rosenfarbe.html">Rosenfarbe</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="shop.html">Shop</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="b2b.html">B2B</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="kontakt.php">Contact</a>
-              </li>
-            </ul>
-
-            <a class="navbar-brand mx-auto" href="#">
-
-            </a>
-
-            <div class="d-flex justify-content-end">
-              <ul class="navbar-nav mr-auto" style="margin-right: 0px;">
-                <li class="nav-item mr-3">
-                  <a class="nav-link" href="#" data-toggle="popover" title="temporairement indisponible" data-content="La boutique est en cours de développement et sera bientôt disponible"><i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-light">0</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="img/FR.png" alt="">
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href=""><img src="../../../assets/img/FR.png" alt=""></a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="../index.html"><img src="../../../assets/img/DE.png" alt=""></a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="../en/index.html"><img src="../../../assets/img/GB.png" alt=""></a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-
-          </div>
-        </div>
-  </nav>
-
-  <div class="vertical-center text-center" style="position: relative;">
-    <h2 class="display-4" style="font-size: 100px;">Noix & Safran</h2>
-    <h2 class="display-4" style="font-size: 90px;">de Première Qualité</h2>
+                </div>
+          </ng-template>
+        </p-dropdown>
+      </ul>
+    </nav>
   </div>
+  <!-- small screen nav -->
+  <div class="col-12 d-block d-md-none text-center">
 
+    <button pButton pRipple type="button" (click)="visibleSidebar = true" icon="pi pi-bars" style="background-color: transparent;color: #AF854F;border-color: #AF854F;float: left;"></button>
+    <p-sidebar [(visible)]="visibleSidebar" [modal]="false">
+      <h1 style="font-weight:normal;color: #03072A;">Rosenfarbe</h1>
+      <button pButton pRipple routerLink="/fr" type="button" label="Home" class="p-button-text d-block mt-1"></button>
+      <button pButton pRipple routerLink="/fr/rosenfarbe" type="button" label="Rosenfarbe" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/fr/shop" type="button" label="Shop" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/fr/b2b" type="button" label="Produits" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/fr/contact" type="button" label="Contact" class="p-button-text d-block"></button>
+
+      <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="img-fluid mt-4">
+
+    </p-sidebar>
+    <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="mx-auto img-fluid" style="height: 45px;margin-left: 20px !important;">
+    <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+      <ng-template pTemplate="selectedItem">
+        <img src="../../../assets/img/FR.png" style="height: 20px;width: 20px;" />
+      </ng-template>
+      <ng-template let-lang pTemplate="item">
+        <div class="lang-item" >
+              <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+
+            </div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+</header><!-- End Header -->
+<div class="section-1 box" style="padding-top: 200px;padding-bottom: 200px;">
+  <div class="text-center " style="position: relative;">
+    <h2 class="display-4" style="font-size: 100px;">de Première Qualité</h2>
+    <h2 class="display-4" style="font-size: 90px;">Noix & Safran</h2>
+  </div>
 </div>
 
 <div id="products" class="container-fluid pt-4 pb-4" style="background-color: #AF854F;">
@@ -70,92 +73,37 @@
     </div>
     <div class="col-md-6 col-lg-3 text-center">
       <div class="card">
-        <a href="shop.html#p1"><img class="card-img" src="../../../assets/img/c1.jpg" alt="Card image" onmouseover="hover1(this);" onmouseout="unhover1(this);"></a>
+        <a href=""><img class="card-img" src="../../../assets/img/c1.jpg" alt="Pistaches Safran"></a>
       </div>
       <h3 class="mt-4" style="font-size: 35px;">Pistaches<br>Safran</h3>
     </div>
     <div class="col-md-6 col-lg-3 text-center">
       <div class="card">
-        <a href="shop.html#p2"><img class="card-img" src="../../../assets/img/c2.jpg" alt="Card image" onmouseover="hover2(this);" onmouseout="unhover2(this);"></a>
+        <a href=""><img class="card-img" src="../../../assets/img/c2.jpg" alt="Pistaches Sel Rose"></a>
       </div>
-      <h3 class="mt-4" style="font-size: 35px;">Pistaches<br>Salées</h3>
+      <h3 class="mt-4" style="font-size: 35px;">Pistaches<br>Sel Rose</h3>
     </div>
     <div class="col-md-6 col-lg-3 text-center">
       <div class="card">
-        <a href="shop.html#p3"><img class="card-img" src="../../../assets/img/c3.jpg" alt="Card image" onmouseover="hover3(this);" onmouseout="unhover3(this);"></a>
+        <a href=""><img class="card-img" src="../../../assets/img/c3.jpg" alt="Pistaches Citron" ></a>
       </div>
       <h3 class="mt-4" style="font-size: 35px;">Pistaches<br>Citron</h3>
     </div>
     <div class="col-md-6 col-lg-3 text-center">
       <div class="card">
-        <a href="shop.html#p4"><img class="card-img" src="../../../assets/img/c4.jpg" alt="Card image" onmouseover="hover4(this);" onmouseout="unhover4(this);"></a>
+        <a href=""><img class="card-img" src="../../../assets/img/c4.jpg" alt="Mélange de noix" ></a>
       </div>
-      <h3 class="mt-4" style="font-size: 35px;">Mélange<br>de<br>noix</h3>
+      <h3 class="mt-4" style="font-size: 35px;">Mélange de noix</h3>
     </div>
     <div class="col-12 text-center">
-      <button pButton pRipple type="button" label="Shop" class="p-button-raised styled-box-purple" style="background-color: #03072A;border-color: #03072A;"></button>
-
+      <button pButton pRipple routerLink="/fr/shop" type="button" icon="pi pi-amazon" iconPos="right" label="Shop" class="p-button-raised styled-box-purple" style="background-color: #03072A;border-color: #03072A;"></button>
     </div>
   </div>
 </div>
 
 <div class="section-3 box">
-  <div class="vertical-center text-center" style="position: relative;">
+  <div class="vertical-center text-center">
   </div>
 </div>
 
-<div class="container-fluid pt-4 pb-4 footer">
-      <div class="row">
-        <div class="col-md-2">
-
-        </div>
-        <div class="col-md-4">
-          <h2 class="pb-4 pr-5 pt-4" style="font-size: 55px;">Rosenfarbe</h2>
-          <a href="index.html">Home</a> <br>
-          <a href="rosenfarbe.html">Rosenfarbe</a> <br>
-          <a href="shop.html">Shop</a> <br>
-          <a href="b2b.html">B2B</a> <br>
-          <a href="kontakt.php">Contact</a> <br>
-        </div>
-        <div class="col-md-2">
-          <h2 class="pt-4 pb-4" style="font-size: 55px;">&nbsp;</h2>
-          <a href="#" data-toggle="modal" data-target="#Modal1">Conditions Générales</a> <br>
-          <a href="#" data-toggle="modal" data-target="#Modal2">Protection des données</a> <br>
-          <a href="#" data-toggle="modal" data-target="#Modal3">Mentions Légales</a>
-        </div>
-        <div class="col-md-2">
-          <h2 class="pt-4 pb-4" style="font-size: 55px;">&nbsp;</h2>
-          <img src="../../../assets/img/logo1.png" alt="" width="90%" class="" style="display: block; margin-left: auto; margin-right: auto;">
-        </div>
-        <div class="col-md-2">
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-2">
-
-        </div>
-        <div class="col-md-4">
-          <a href="#">E: info@rosenfarbe.com</a> <br>
-          <a href="#">T: +49 631 311 70047</a>
-        </div>
-        <div class="col-md-2">
-          <a href="#">Instagram</a> <br>
-          <a href="#">Pinterest</a>
-        </div>
-        <div class="col-md-2">
-
-        </div>
-        <div class="col-md-2">
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <hr style="border-top: 1px solid #FFF;">
-          <p class="lead pl-5 pt-0" style="font-size: 13px;">&copy;
-2020, Tous droits réservés. Les droits d'auteur de ce site internet sont la propriété exclusive de Rosenfarbe.</p>
-        </div>
-      </div>
-</div>
-
+<app-footer-fr></app-footer-fr>

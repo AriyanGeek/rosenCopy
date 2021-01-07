@@ -1,1 +1,373 @@
-<p>shop-de works!</p>
+<!-- ======= Header ======= -->
+<header id="headerFix" class="fixed-top d-flex align-items-center">
+  <!-- big screen nav -->
+  <div class="container-fluid align-items-center d-none d-md-flex">
+    <div class="logo ml-2 mr-3">
+      <a href="index.html">
+        <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class=" img-fluid">
+      </a>
+    </div>
+
+    <nav class="nav-menu" style="width: inherit;">
+      <ul>
+        <li><a routerLink="/de">Home</a></li>
+        <li><a routerLink="/de/rosenfarbe">Rosenfarbe</a></li>
+        <li class="active"><a href="">Shop</a></li>
+        <li><a routerLink="/de/b2b">Produkte</a></li>
+        <li><a routerLink="/de/contact">Kontakt</a></li>
+
+        <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+          <ng-template pTemplate="selectedItem">
+            <img src="../../../assets/img/DE.png" style="height: 20px;width: 20px;" />
+          </ng-template>
+          <ng-template let-lang pTemplate="item">
+            <div class="lang-item" >
+                  <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+
+                </div>
+          </ng-template>
+        </p-dropdown>
+      </ul>
+    </nav>
+  </div>
+  <!-- small screen nav -->
+  <div class="col-12 d-block d-md-none text-center">
+
+    <button pButton pRipple type="button" (click)="visibleSidebar = true" icon="pi pi-bars" style="background-color: transparent;color: #AF854F;border-color: #AF854F;float: left;"></button>
+    <p-sidebar [(visible)]="visibleSidebar" [modal]="false">
+      <h1 style="font-weight:normal;color: #03072A;">Rosenfarbe</h1>
+      <button pButton pRipple routerLink="/de" type="button" label="Home" class="p-button-text d-block mt-1"></button>
+      <button pButton pRipple routerLink="/de/rosenfarbe" type="button" label="Rosenfarbe" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/de/shop" type="button" label="Shop" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/de/b2b" type="button" label="Produkte" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/de/contact" type="button" label="Kontakt" class="p-button-text d-block"></button>
+
+      <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="../../../assets/img-fluid mt-4">
+
+    </p-sidebar>
+    <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="mx-auto img-fluid" style="height: 45px;margin-left: 20px !important;">
+    <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+      <ng-template pTemplate="selectedItem">
+        <img src="../../../assets/img/DE.png" style="height: 20px;width: 20px;" />
+      </ng-template>
+      <ng-template let-lang pTemplate="item">
+        <div class="lang-item" >
+              <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+
+            </div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+</header>
+<!-- End Header -->
+<div class="section-8 box">
+  <div class="vertical-center text-center" style="position: relative;">
+    <h2 class="display-4" style="font-size: 90px;">Shop</h2>
+  </div>
+</div>
+<div class="container-fluid text-center" style="background-color: #56433F; color: #E0E0E0;font-family: 'Marcellus SC', serif;">
+  <div class="row">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10 mt-5">
+      <p class="p-text">In unserem Shop können Sie Nüsse exzellenter Qualität direkt bestellen.</p>
+      <p class="p-text">Qualitätsversprechen:</p>
+      <p class="p-text">Alle Pistazien von Rosenfarbe sind ausschließlich 'Superlang'. Diese Qualität bietet die optimale Verteilung der Zutaten während des Röstprozesses und gewährleistet das besonders einfache Entfernen der Schale vor dem Verzehr.</p>
+      <p class="p-text">Sämtliche Nüsse und Zutaten werden von uns persönlich verlesen. Dank unserem hohen Qualitätsanspruch verdient jedes einzelne Produkt, dass unsere Hausrösterei verlässt das Prädikat 'Hand Selected'.</p>
+      <p class="p-text">Ganz Rosenfarbe eben.</p>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-12">
+      <hr style="border-top: 2px solid #E0E0E0;">
+    </div>
+    <div class="col-md-6">
+      <img src="../../../assets/img/c1.jpg" alt="" width="100%" onmouseover="hover1(this);" onmouseout="unhover1(this);">
+    </div>
+    <div class="col-md-6" id="p1">
+      <h1>Pistazien<br>Safran</h1>
+      <p class="p-text">Pistazie küsst Safran.</p>
+      <p class="p-text">Unsere erlesenen Pistazien werden schonend mit Safran, dem Gold der Gewürze, geröstet.</p>
+      <p class="p-text">Die durch diese Fusion von Exzellenz entstehenden Aromen umschmeicheln Ihre Geschmacksknospen auf so einzigartige Weise, dass Worte viel zu schwach sind, um diesem Erlebnis gerecht werden zu können. Den Safran für unsere Pistazien importieren wir direkt vom Erzeuger in der 'Chorasan' Provinz im Nordosten des Irans. Reichen Sie beispielsweise unsere Pistazien mit Safran zu einem ebenso erlesenen Whisky! </p>
+      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Zurzeit nicht verfügbar" data-content="Shop wird entwickelt und wird bald verfügbar sein">kaufen</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal1" style="color: #E0E0E0;">Mehr Info</a>
+      <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pistazien mit Safran</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Nettogewicht: 250g</p><br>
+
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td style="text-align: left;">Nährwerte</td>
+                    <td style="text-align: right;">Je 100g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Energiewert</td>
+                    <td style="text-align: right;">2635,9 kJ/630 kcal</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Fett</td>
+                    <td style="text-align: right;">48,5 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- davon gesättigte Fettsäuren</td>
+                    <td style="text-align: right;">6,1 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Kohlenhydrate</td>
+                    <td style="text-align: right;">27,1 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- davon Zucker</td>
+                    <td style="text-align: right;">6,8 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Eiweiß</td>
+                    <td style="text-align: right;">21,2 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Salz</td>
+                    <td style="text-align: right;">2 g</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>Zutaten: Pistazien mit Schale 96%, Meersalz 2%, Safranextrakt 2%</p>
+              <p>Hinweis für Allergiker: Das Produkt kann Spuren von anderen Schalenfrüchten enthalten</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">schließen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <hr style="border-top: 2px solid #E0E0E0;">
+    </div>
+    <div class="col-md-6" id="p3">
+      <h1>Pistazien<br>Zitrone</h1>
+      <p class="p-text">Würzig, spritzig und erfrischend. So beschreiben Kenner unsere Pistazien mit Zitrone.</p>
+      <p class="p-text">Dieser in unserer Privatrösterei in liebevoller Handarbeit geschaffene Meilenstein des Genusses passt gut zu einem Gin Tonic.<br>Unvergesslich! </p>
+      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Zurzeit nicht verfügbar" data-content="Shop wird entwickelt und wird bald verfügbar sein">kaufen</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal2" style="color: #E0E0E0;">Mehr Info</a>
+      <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pistazien mit Zitrone</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Nettogewicht: 250g</p><br>
+
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td style="text-align: left;">Nährwerte</td>
+                    <td style="text-align: right;">Je 100g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Energiewert</td>
+                    <td style="text-align: right;">2635,9 kJ/630 kcal</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Fett</td>
+                    <td style="text-align: right;">48,5 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- davon gesättigte Fettsäuren</td>
+                    <td style="text-align: right;">6,1 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Kohlenhydrate</td>
+                    <td style="text-align: right;">27,1 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- davon Zucker</td>
+                    <td style="text-align: right;">6,8 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Eiweiß</td>
+                    <td style="text-align: right;">21,2 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Salz</td>
+                    <td style="text-align: right;">2 g</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>Zutaten: Pistazien mit Schale 96%, Meersalz 2%, Zitronenextrakt 2%</p>
+              <p>Hinweis für Allergiker: Das Produkt kann Spuren von anderen Schalenfrüchten enthalten</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">schließen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="../../../assets/img/c3.jpg" alt="" width="100%" onmouseover="hover3(this);" onmouseout="unhover3(this);">
+    </div>
+    <div class="col-12">
+      <hr style="border-top: 2px solid #E0E0E0;">
+    </div>
+    <div class="col-md-6">
+      <img src="../../../assets/img/c2.jpg" alt="" width="100%" onmouseover="hover2(this);" onmouseout="unhover2(this);">
+    </div>
+    <div class="col-md-6" id="p2">
+      <h1>Pistazien<br>Rosa Salz</h1>
+      <p class="p-text">Das Treffen der sanften Giganten.<br>Bei dieser Komposition trifft der einzigartige Geschmack unserer persischen Riesenpistazien auf das ursprünglich mineralische Salz des Himalaya-Gebirges in punktgenauer Röstung miteinander verschmolzen.</p>
+      <p class="p-text">Herausragend!</p>
+      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Zurzeit nicht verfügbar" data-content="Shop wird entwickelt und wird bald verfügbar sein">kaufen</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal3" style="color: #E0E0E0;">Mehr Info</a>
+      <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pistazien Gesalzen</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Nettogewicht: 250g</p><br>
+
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td style="text-align: left;">Nährwerte</td>
+                    <td style="text-align: right;">Je 100g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Energiewert</td>
+                    <td style="text-align: right;">2635,9 kJ/630 kcal</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Fett</td>
+                    <td style="text-align: right;">48,5 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- davon gesättigte Fettsäuren</td>
+                    <td style="text-align: right;">6,1 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Kohlenhydrate</td>
+                    <td style="text-align: right;">27,1 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- davon Zucker</td>
+                    <td style="text-align: right;">6,8 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Eiweiß</td>
+                    <td style="text-align: right;">21,2 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Salz</td>
+                    <td style="text-align: right;">2 g</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>Zutaten: Pistazien mit Schale 98%, Rosa Salz 2%</p>
+              <p>Hinweis für Allergiker: Das Produkt kann Spuren von anderen Schalenfrüchten enthalten</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">schließen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <hr style="border-top: 2px solid #E0E0E0;">
+    </div>
+    <div class="col-md-6" id="p4">
+      <h1>Nuss Mix<br>Meersalz</h1>
+      <p class="p-text">Gesalzene Vielfalt.</p>
+      <p class="p-text">Die Nüsse dieser Kreation stammen aus allen Teilen der Welt. Persische Pistazienkerne, vietnamesische Cashewkerne, spanische Mandel, georgische Haselnüsse und südafrikanische Macadamia vereint durch die Kraft der Röstung und verfeinert mit Meersalz.</p>
+      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Zurzeit nicht verfügbar" data-content="Shop wird entwickelt und wird bald verfügbar sein">kaufen</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal4" style="color: #E0E0E0;">Mehr Info</a>
+      <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Nuss Mix</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Nettogewicht: 250g</p><br>
+
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td style="text-align: left;">Nährwerte</td>
+                    <td style="text-align: right;">Je 100g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Energiewert</td>
+                    <td style="text-align: right;">2719,6 kJ/650 kcal</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Fett</td>
+                    <td style="text-align: right;">54,2 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- davon gesättigte Fettsäuren</td>
+                    <td style="text-align: right;">5,5 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Kohlenhydrate</td>
+                    <td style="text-align: right;">21 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">- davon Zucker</td>
+                    <td style="text-align: right;">5 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Eiweiß</td>
+                    <td style="text-align: right;">19,6 g</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Salz</td>
+                    <td style="text-align: right;">1,5 g</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>Zutaten: Nussmischung mit verschiedenen Gewichtsanteilen bestehend aus Pistazienkernen, Cashew-Kernen, Mandeln, Haselnüssen und Macadamia, Meersalz 1,5%</p>
+              <p>Hinweis für Allergiker: Das Produkt kann Spuren von anderen Schalenfrüchten enthalten</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">schließen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="../../../assets/img/c4.jpg" alt="" width="100%" onmouseover="hover4(this);" onmouseout="unhover4(this);">
+    </div>
+    <div class="col-12">
+      <hr style="border-top: 2px solid #E0E0E0;">
+    </div>
+  </div>
+</div>
+<app-footer-de></app-footer-de>

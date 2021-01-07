@@ -35,6 +35,15 @@ import { ContactDeComponent } from './contact/de/contact-de.component';
 import { ContactComponent } from './contact/en/contact.component';
 import { ContactFrComponent } from './contact/fr/contact-fr.component';
 import { LoginComponent } from './login/login.component';
+import { FooterComponent } from './footer/en/footer.component';
+import { FooterDeComponent } from './footer/de/footer-de.component';
+import { FooterFrComponent } from './footer/fr/footer-fr.component';
+import { SafranComponent } from './b2b/en/safran/safran.component';
+import { NusseComponent } from './b2b/en/nusse/nusse.component';
+import { SafranDeComponent } from './b2b/de/safran-de/safran-de.component';
+import { NusseDeComponent } from './b2b/de/nusse-de/nusse-de.component';
+import { SafranFrComponent } from './b2b/fr/safran-fr/safran-fr.component';
+import { NusseFrComponent } from './b2b/fr/nusse-fr/nusse-fr.component';
 
 const appRouts: Routes = [
   { path: '', component: HomeComponent },
@@ -50,6 +59,12 @@ const appRouts: Routes = [
   { path: 'en/b2b', component: B2bComponent },
   { path: 'de/b2b', component: B2bDeComponent },
   { path: 'fr/b2b', component: B2bFrComponent },
+  { path: 'en/safran', component: SafranComponent },
+  { path: 'de/safran', component: SafranDeComponent },
+  { path: 'fr/safran', component: SafranFrComponent },
+  { path: 'en/nusse', component: NusseComponent },
+  { path: 'de/nusse', component: NusseDeComponent },
+  { path: 'fr/nusse', component: NusseFrComponent },
   { path: 'en/contact', component: ContactComponent },
   { path: 'de/contact', component: ContactDeComponent },
   { path: 'fr/contact', component: ContactFrComponent },
@@ -61,14 +76,15 @@ const appRouts: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
+    HomeDeComponent,
+    HomeFrComponent,
     AdminComponent,
     FoodComponent,
-    HomeDeComponent,
     RosenfarbeComponent,
     RosenfarbeDeComponent,
     RosenfarbeFrComponent,
-    ShopDeComponent,
     ShopComponent,
+    ShopDeComponent,
     ShopFrComponent,
     B2bDeComponent,
     B2bComponent,
@@ -77,6 +93,15 @@ const appRouts: Routes = [
     ContactComponent,
     ContactFrComponent,
     LoginComponent,
+    FooterComponent,
+    FooterDeComponent,
+    FooterFrComponent,
+    SafranComponent,
+    NusseComponent,
+    SafranDeComponent,
+    NusseDeComponent,
+    SafranFrComponent,
+    NusseFrComponent,
   ],
   imports: [
     BrowserModule,
@@ -96,6 +121,8 @@ const appRouts: Routes = [
     SidebarModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent,
+    ],
 })
 export class AppModule {}

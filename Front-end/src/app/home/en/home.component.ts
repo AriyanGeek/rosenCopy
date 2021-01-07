@@ -11,14 +11,6 @@ export class HomeComponent implements OnInit {
   visibleSidebar;
   langs = ['EN','DE','FR'];
   selectedLang: string;
-  all = true;
-  starter = true;
-  mainCourse = true;
-  salad = true;
-  garnishes = true;
-  dessert = true;
-  foods;
-  events;
 
   constructor(
     private http: HttpClient,

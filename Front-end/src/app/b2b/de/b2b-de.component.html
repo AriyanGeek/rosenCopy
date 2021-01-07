@@ -1,1 +1,96 @@
-<p>b2b-de works!</p>
+<!-- ======= Header ======= -->
+<header id="headerFix" class="fixed-top d-flex align-items-center">
+  <!-- big screen nav -->
+  <div class="container-fluid align-items-center d-none d-md-flex">
+    <div class="logo ml-2 mr-3">
+      <a href="index.html">
+        <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class=" img-fluid">
+      </a>
+    </div>
+
+    <nav class="nav-menu" style="width: inherit;">
+      <ul>
+        <li><a routerLink="/de">Home</a></li>
+        <li ><a routerLink="/de/rosenfarbe">Rosenfarbe</a></li>
+        <li><a routerLink="/de/shop">Shop</a></li>
+        <li class="active"><a href="">Produkte</a></li>
+        <li><a routerLink="/de/contact">Kontakt</a></li>
+
+        <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+          <ng-template pTemplate="selectedItem">
+            <img src="../../../assets/img/DE.png" style="height: 20px;width: 20px;" />
+          </ng-template>
+          <ng-template let-lang pTemplate="item">
+            <div class="lang-item" >
+                  <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+
+                </div>
+          </ng-template>
+        </p-dropdown>
+      </ul>
+    </nav>
+  </div>
+  <!-- small screen nav -->
+  <div class="col-12 d-block d-md-none text-center">
+
+    <button pButton pRipple type="button" (click)="visibleSidebar = true" icon="pi pi-bars" style="background-color: transparent;color: #AF854F;border-color: #AF854F;float: left;"></button>
+    <p-sidebar [(visible)]="visibleSidebar" [modal]="false">
+      <h1 style="font-weight:normal;color: #03072A;">Rosenfarbe</h1>
+      <button pButton pRipple routerLink="/de" type="button" label="Home" class="p-button-text d-block mt-1"></button>
+      <button pButton pRipple routerLink="/de/rosenfarbe" type="button" label="Rosenfarbe" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/de/shop" type="button" label="Shop" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/de/b2b" type="button" label="Produkte" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/de/contact" type="button" label="Kontakt" class="p-button-text d-block"></button>
+
+      <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="img-fluid mt-4">
+
+    </p-sidebar>
+    <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="mx-auto img-fluid" style="height: 45px;margin-left: 20px !important;">
+    <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+      <ng-template pTemplate="selectedItem">
+        <img src="../../../assets/img/DE.png" style="height: 20px;width: 20px;" />
+      </ng-template>
+      <ng-template let-lang pTemplate="item">
+        <div class="lang-item" >
+              <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+
+            </div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+</header>
+<!-- End Header -->
+<div class="section-7 box">
+  <div class="vertical-center text-center" style="position: relative;">
+    <h2 class="display-4" style="font-size: 90px;">Business to Business</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid text-center" style="background-color: #AF854F; color: #000;">
+<div class="row">
+  <div class="col-md-6 mt-5 mb-5">
+    <a routerLink="/de/nusse">
+      <div class="card bg-dark text-white">
+        <img src="../../../assets/img/Nusse/p2.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title"><h2 style="font-size: 55px;">Pistazien</h2></h5>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-6 mt-5 mb-5">
+    <a routerLink="/de/safran">
+      <div class="card bg-dark text-white">
+        <img src="../../../assets/img/Safran/Negin.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title"><h2 style="font-size: 55px;">Safran</h2></h5>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+</div>
+
+<app-footer-de></app-footer-de>
+

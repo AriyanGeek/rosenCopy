@@ -1,1 +1,166 @@
-<p>contact-de works!</p>
+<!-- ======= Header ======= -->
+<header id="headerFix" class="fixed-top d-flex align-items-center">
+  <!-- big screen nav -->
+  <div class="container-fluid align-items-center d-none d-md-flex">
+    <div class="logo ml-2 mr-3">
+      <a href="index.html">
+        <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class=" img-fluid">
+      </a>
+    </div>
+
+    <nav class="nav-menu" style="width: inherit;">
+      <ul>
+        <li><a routerLink="/de">Home</a></li>
+        <li ><a routerLink="/de/rosenfarbe">Rosenfarbe</a></li>
+        <li><a routerLink="/de/shop">Shop</a></li>
+        <li><a routerLink="/de/b2b">Produkte</a></li>
+        <li class="active"><a href="">Kontakt</a></li>
+
+        <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+          <ng-template pTemplate="selectedItem">
+            <img src="../../../assets/img/DE.png" style="height: 20px;width: 20px;" />
+          </ng-template>
+          <ng-template let-lang pTemplate="item">
+            <div class="lang-item" >
+                  <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+
+                </div>
+          </ng-template>
+        </p-dropdown>
+      </ul>
+    </nav>
+  </div>
+  <!-- small screen nav -->
+  <div class="col-12 d-block d-md-none text-center">
+
+    <button pButton pRipple type="button" (click)="visibleSidebar = true" icon="pi pi-bars" style="background-color: transparent;color: #AF854F;border-color: #AF854F;float: left;"></button>
+    <p-sidebar [(visible)]="visibleSidebar" [modal]="false">
+      <h1 style="font-weight:normal;color: #03072A;">Rosenfarbe</h1>
+      <button pButton pRipple routerLink="/de" type="button" label="Home" class="p-button-text d-block mt-1"></button>
+      <button pButton pRipple routerLink="/de/rosenfarbe" type="button" label="Rosenfarbe" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/de/shop" type="button" label="Shop" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/de/b2b" type="button" label="Produkte" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/de/contact" type="button" label="Kontakt" class="p-button-text d-block"></button>
+
+      <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="img-fluid mt-4">
+
+    </p-sidebar>
+    <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="mx-auto img-fluid" style="height: 45px;margin-left: 20px !important;">
+    <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+      <ng-template pTemplate="selectedItem">
+        <img src="../../../assets/img/DE.png" style="height: 20px;width: 20px;" />
+      </ng-template>
+      <ng-template let-lang pTemplate="item">
+        <div class="lang-item" >
+              <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+
+            </div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+</header>
+<!-- End Header -->
+<div class="section-2 box">
+  <div class="vertical-center text-center" style="position: relative;">
+    <h2 class="display-4" style="font-size: 90px;">Kontakt</h2>
+  </div>
+</div>
+<div class="container-fluid text-center" style="background-color: #AF854F; color: #000;">
+  <div class="row">
+    <div class="col-12">
+      <h1>Kontaktieren Sie uns!</h1>
+      <p class="lead">Bitte füllen Sie das unten stehende Formular aus und wir werden uns so schnell wie möglich mit Ihnen in Verbindung setzen.</p>
+    </div>
+  </div>
+  <form action="" method="post">
+<div class="form-row">
+  <div class="col-md-1">
+
+  </div>
+<div class="form-group col-md-5">
+  <label for="Fname">Vorname *</label>
+  <input type="text" class="form-control" id="Fname">
+</div>
+<div class="form-group col-md-5">
+  <label for="Lname">Nachname *</label>
+  <input type="text" class="form-control" id="Lname">
+</div>
+  <div class="col-md-1">
+
+  </div>
+  <div class="col-md-1">
+
+  </div>
+<div class="form-group col-md-3">
+  <label for="email">Email *</label>
+  <input type="email" class="form-control" id="email">
+</div>
+<div class="form-group col-md-4">
+  <label for="comp">Name der Firma</label>
+  <input type="text" class="form-control" id="comp">
+</div>
+<div class="form-group col-md-3">
+  <label for="tel">Telefon</label>
+  <input type="text" class="form-control" id="tel">
+</div>
+  <div class="col-md-1">
+
+  </div>
+  <div class="col-md-1">
+
+  </div>
+<div class="form-group col-md-10">
+  <label for="title">Nachrichtentitel *</label>
+  <input type="text" class="form-control" id="title">
+</div>
+  <div class="col-md-1">
+
+  </div>
+    <div class="col-md-1">
+
+    </div>
+<div class="form-group col-md-10">
+  <label for="text">Nachrichtentext *</label>
+  <textarea class="form-control" id="text" rows="8"></textarea>
+</div>
+  <div class="col-md-1">
+
+  </div>
+</div>
+<button type="submit" value="submit" class="btn btn-outline-dark">senden</button>
+
+</form>
+  <div class="row">
+    <div class="col-12">
+      <h1 class="pt-4 pb-4">Kontaktdaten</h1>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Email-Adresse</h5>
+          <h6 class="card-subtitle mb-2 text-muted">senden Sie uns eine Email!</h6>
+          <a href="#" class="card-link">info@rosenfarbe.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-3">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Telefonnummer</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Rufen Sie uns an!</h6>
+          <a href="#" class="card-link">+49 631 311 70047</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+  </div>
+</div>
+<app-footer-de></app-footer-de>

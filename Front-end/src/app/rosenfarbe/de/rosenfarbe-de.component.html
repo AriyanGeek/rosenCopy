@@ -1,1 +1,85 @@
-<p>rosenfarbe-de works!</p>
+<!-- ======= Header ======= -->
+<header id="headerFix" class="fixed-top d-flex align-items-center">
+  <!-- big screen nav -->
+  <div class="container-fluid align-items-center d-none d-md-flex">
+    <div class="logo ml-2 mr-3">
+      <a href="index.html">
+        <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class=" img-fluid">
+      </a>
+    </div>
+
+    <nav class="nav-menu" style="width: inherit;">
+      <ul>
+        <li><a routerLink="/de">Home</a></li>
+        <li class="active"><a href="">Rosenfarbe</a></li>
+        <li><a routerLink="/de/shop">Shop</a></li>
+        <li><a routerLink="/de/b2b">Produkte</a></li>
+        <li><a routerLink="/de/contact">Kontakt</a></li>
+
+        <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+          <ng-template pTemplate="selectedItem">
+            <img src="../../../assets/img/DE.png" style="height: 20px;width: 20px;" />
+          </ng-template>
+          <ng-template let-lang pTemplate="item">
+            <div class="lang-item" >
+                  <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+
+                </div>
+          </ng-template>
+        </p-dropdown>
+      </ul>
+    </nav>
+  </div>
+  <!-- small screen nav -->
+  <div class="col-12 d-block d-md-none text-center">
+
+    <button pButton pRipple type="button" (click)="visibleSidebar = true" icon="pi pi-bars" style="background-color: transparent;color: #AF854F;border-color: #AF854F;float: left;"></button>
+    <p-sidebar [(visible)]="visibleSidebar" [modal]="false">
+      <h1 style="font-weight:normal;color: #03072A;">Rosenfarbe</h1>
+      <button pButton pRipple routerLink="/de" type="button" label="Home" class="p-button-text d-block mt-1"></button>
+      <button pButton pRipple routerLink="/de/rosenfarbe" type="button" label="Rosenfarbe" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/de/shop" type="button" label="Shop" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/de/b2b" type="button" label="Produkte" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/de/contact" type="button" label="Kontakt" class="p-button-text d-block"></button>
+
+      <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="img-fluid mt-4">
+
+    </p-sidebar>
+    <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="mx-auto img-fluid" style="height: 45px;margin-left: 20px !important;">
+    <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+      <ng-template pTemplate="selectedItem">
+        <img src="../../../assets/img/DE.png" style="height: 20px;width: 20px;" />
+      </ng-template>
+      <ng-template let-lang pTemplate="item">
+        <div class="lang-item" >
+              <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+
+            </div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+</header>
+<!-- End Header -->
+<div class="section-7 box"></div>
+<div class="container-fluid text-center py-5" style="background-color: #AF854F; color: #000;font-family: 'Marcellus SC', serif;">
+  <div class="row">
+    <div class="col-12">
+      <h1>Über Rosenfarbe</h1>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+      <p class="p-text"> Das Unternehmen Rosenfarbe e.K. existiert seit 2020. Der Gründer, Kambiz Arasteh, war nach seinem Studium der Wirtschaftswissenschaften in Frankreich und Großbritannien als Unternehmensberater für Firmen der Gewürz-, Pistazien- und Nusserzeugungsindustrie in Georgien und im Iran tätig. Kambiz, selbst ein großer Nussliebhaber, konnte hierbei ein einzigartiges Fachwissen entwickeln und ist in der Branche sehr gut vernetzt. Die Idee, die besten Produkte seines Netzwerks nach Europa zu bringen und damit zu handeln war geboren und Kambiz begann damit Safran und Pistazien zu importieren.
+      <p class="p-text"> Als Genussmensch mit höchsten Qualitätsansprüchen experimentierte Kambiz mit eigenen Kompositionen der importierten Produkte. In seinen Kreationen kombiniert er die handverlesenen Ingredienzen zu einzigartigen Geschmackserlebnissen. Deshalb tragen alle Produkte das Prädikat 'Hand Selected'. </p>
+      <p class="p-text"> Alle Zutaten werden ohne Umwege, direkt von den Erzeugern importiert, um den Kunden die höchste Qualität und die optimale Frische aller Produkte zu garantieren.</p>
+      <p class="p-text"> Rosenfarbe. Ein Name, viele Eindrücke. Die Rose gilt auf der ganzen Welt als ein Zeichen der Schönheit und der Liebe, dem zudem etwas erotisches innewohnt. Farben wirken auf die Stimmungen der Menschen und schaffen so bleibende Eindrücke. Hiervon ließ sich Kambiz inspirieren, als er den Markennamen für seine Produkte wählte: Von der Schönheit jeder einzelnen Zutat, die er mit viel Liebe zu etwas einzigartigem verbindet und dem Genießen von Speisen, mit dem auch immer ein Hauch Erotik einher geht. Die verschiedenen Farben stehen für die bunte Vielfalt der Gefühle, Erlebnisse und Eindrücke. </p>
+      <p class="p-text"> Ganz Rosenfarbe eben. </p>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>
+
+<app-footer-de></app-footer-de>

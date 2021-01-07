@@ -1,1 +1,134 @@
-<p>rosenfarbe-fr works!</p>
+<!-- ======= Header ======= -->
+<header id="headerFix" class="fixed-top d-flex align-items-center">
+  <!-- big screen nav -->
+  <div class="container-fluid align-items-center d-none d-md-flex">
+    <div class="logo ml-2 mr-3">
+      <a href="index.html">
+        <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class=" img-fluid">
+      </a>
+    </div>
+
+    <nav class="nav-menu" style="width: inherit;">
+      <ul>
+        <li><a routerLink="/fr">Home</a></li>
+        <li class="active"><a href="">Rosenfarbe</a></li>
+        <li><a routerLink="/fr/shop">Shop</a></li>
+        <li><a routerLink="/fr/b2b">Produits</a></li>
+        <li><a routerLink="/fr/contact">Contact</a></li>
+
+        <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+          <ng-template pTemplate="selectedItem">
+            <img src="../../../assets/img/FR.png" style="height: 20px;width: 20px;" />
+          </ng-template>
+          <ng-template let-lang pTemplate="item">
+            <div class="lang-item" >
+                  <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+
+                </div>
+          </ng-template>
+        </p-dropdown>
+      </ul>
+    </nav>
+  </div>
+  <!-- small screen nav -->
+  <div class="col-12 d-block d-md-none text-center">
+
+    <button pButton pRipple type="button" (click)="visibleSidebar = true" icon="pi pi-bars" style="background-color: transparent;color: #AF854F;border-color: #AF854F;float: left;"></button>
+    <p-sidebar [(visible)]="visibleSidebar" [modal]="false">
+      <h1 style="font-weight:normal;color: #03072A;">Rosenfarbe</h1>
+      <button pButton pRipple routerLink="/fr" type="button" label="Home" class="p-button-text d-block mt-1"></button>
+      <button pButton pRipple routerLink="/fr/rosenfarbe" type="button" label="Rosenfarbe" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/fr/shop" type="button" label="Shop" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/fr/b2b" type="button" label="Produits" class="p-button-text d-block"></button>
+      <button pButton pRipple routerLink="/fr/contact" type="button" label="Contact" class="p-button-text d-block"></button>
+
+      <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="img-fluid mt-4">
+
+    </p-sidebar>
+    <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="mx-auto img-fluid" style="height: 45px;margin-left: 20px !important;">
+    <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
+      <ng-template pTemplate="selectedItem">
+        <img src="../../../assets/img/FR.png" style="height: 20px;width: 20px;" />
+      </ng-template>
+      <ng-template let-lang pTemplate="item">
+        <div class="lang-item" >
+              <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+
+            </div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+</header>
+<!-- End Header -->
+<div class="section-7 box"></div>
+<div class="container-fluid text-center py-5" style="background-color: #AF854F; color: #000;font-family: 'Marcellus SC', serif;">
+  <div class="row">
+    <div class="col-12">
+      <h1>À propos de Rosenfarbe</h1>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+
+      <p class="p-text">La société Rosenfarbe existe depuis 2020. Après une formation d'ingénieur en génie industriel en France et en Grande-Bretagne, Kambiz a travaillé comme consultant en management en Géorgie et en Iran pour des producteurs d'épices, de pistaches et de noix en Géorgie et en Iran </p>
+      <p class="p-text">Kambiz, lui-même un grand amateur de noix, a pu développer des connaissances spécialisées uniques et est très bien mis en réseau dans l'industrie. L'idée d'apporter les meilleurs produits de son réseau en Europe et de faire du commerce avec eux est née et Kambiz a commencé à importer du safran et des pistaches.</p>
+      <p class="p-text">En tant que connaisseur avec les normes de qualité les plus élevées, Kambiz a expérimenté ses propres compositions des produits importés. Dans ses créations, il combine les ingrédients triés sur le volet pour créer des expériences gustatives uniques. C'est pourquoi tous les produits portent le label ‘Hand Selected’.</p>
+      <p class="p-text">Tous les ingrédients sont importés directement des producteurs sans détours afin de garantir aux clients la plus haute qualité et une fraîcheur optimale de tous les produits.</p>
+      <p class="p-text">Rosenfarbe qui signifie la couleur de rose en Allemand, est un nom avec de nombreuses impressions. Partout dans le monde, la rose est un symbole de beauté et d'amour, qui a aussi quelque chose d'érotique. Les couleurs affectent l'humeur des gens et créent des impressions durables. Kambiz s'est inspiré de cela lorsqu'il a choisi le nom de la marque pour ses produits: de la beauté de chaque ingrédient, qu'il combine avec beaucoup d'amour pour créer quelque chose d'unique et profiter de la nourriture, avec laquelle il y a toujours une touche d'érotisme. Les différentes couleurs représentent la variété colorée des sentiments, des expériences et des impressions.</p>
+      <p class="p=text">Alors Rosenfarbe, la couleur de rose.</p>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<div class="container-fluid footer px-0">
+  <div class="row" style="font-family: 'Marcellus SC', serif;">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-4">
+      <h2 class="pb-4 pr-5 pt-4" style="font-size: 55px;">Rosenfarbe</h2>
+      <a routerLink="/fr">Home</a> <br>
+      <a routerLink="/fr/rosenfarbe">Rosenfarbe</a> <br>
+      <a routerLink="/fr/shop">Shop</a> <br>
+      <a routerLink="/fr/b2b">B2B</a> <br>
+      <a routerLink="/fr/contact">Contact</a> <br>
+
+    </div>
+    <div class="col-md-3">
+      <h2 class="pt-4 pb-4" style="font-size: 55px;">&nbsp;</h2>
+      <a href="#" data-toggle="modal" data-target="#Modal1">Conditions Générales</a> <br>
+      <a href="#" data-toggle="modal" data-target="#Modal2">Protection des données</a> <br>
+      <a href="#" data-toggle="modal" data-target="#Modal3">Mentions Légales</a> <br><br>
+
+      <i class="fas fa-envelope mr-2"></i>
+      info@rosenfarbe.com<br>
+      <i class="fas fa-phone-square-alt mr-2"></i>
+      +49 631 311 70047<br>
+      <i class="fas fa-map-marker-alt mr-2"></i>
+      Kaiserstr. 10A 67661 Kaiserslautern
+    </div>
+    <div class="col-md-3 mt-4">
+      <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" width="80%" class="" style="display: block; margin-left: auto; margin-right: auto;">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-12 text-center">
+      <p class="lead pl-5 pt-0" style="font-size: 13px;">&copy;
+        2020, Tous droits réservés. Les droits d'auteur de ce site internet sont la propriété exclusive de Rosenfarbe.
+      </p>
+    </div>
+    <div class="col-12 text-center pt-0" style="font-size: 14px;">
+      Designed by <a href="https://t.me/Ariyan_Geek"><img src="../../../assets/img/MyLogo-alt.jpg" alt="G-Design"
+        class="img-fluid rounded-circle shadow" style="height: 28px;"></a>
+    G-Design
+    </div>
+  </div>
+</div>

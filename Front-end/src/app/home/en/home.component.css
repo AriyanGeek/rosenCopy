@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
-.footer a {
-  color: #FFF;
-}
+
 
 .lnu a:hover {
   text-decoration: none !important;
@@ -99,9 +97,6 @@ h1, h2, h3, h4, nav {
   font-size: 1em !important;
 }
 
-footer h5 {
-  color: #454545;
-}
 
 .content a:hover {
   color: #D5D5D5;
@@ -109,11 +104,6 @@ footer h5 {
 
 [class*="col-"] {
     padding: 1rem;
-}
-
-.footer {
-  color: #FFF !important;
-  background-color: #03072A !important;
 }
 
 

@@ -94,30 +94,6 @@ h1, h2, h3, h4, nav {
   padding-right: 1rem;
 }
 
-.fa-telegram-plane {
-  color: #0089B9;
-}
-
-.fa-instagram {
-  color: #E74C3C;
-}
-
-.fa-twitter {
-  color: #00aced;
-}
-
-.fa-facebook-square {
-  color: #3b5998
-}
-
-.fa-whatsapp {
-  color: #00E20E;
-}
-
-.fa-telegram-plane:hover, .fa-instagram:hover, .fa-twitter:hover, .fa-facebook-square:hover, .fa-whatsapp:hover {
-  color: #D5D5D5;
-}
-
 .foot {
   color: #999999;
   font-size: 1em !important;
@@ -202,7 +178,7 @@ figure {
 }
 
 .section-3{
-      height: 50%;
+      height: 400px;
       background-image: url(../../../assets/img/Safran/sfixed2.jpg);
       background-attachment: fixed;
       background-size: cover;
@@ -215,12 +191,12 @@ figure {
   background-size: cover;
 }
 
-.section-5{
+/* .section-5{
   height: 60%;
-  background-image: url(../../../assets/img/Safran/sfixed1.jpg);
+  background-image: url(../../../assets/img/Safran/fixed1.jpg);
   background-attachment: fixed;
   background-size: cover;
-}
+} */
 
 .section-6{
       height: 50%;

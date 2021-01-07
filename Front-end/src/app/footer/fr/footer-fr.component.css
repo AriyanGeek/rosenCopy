@@ -1,0 +1,13 @@
+.footer {
+  color: #FFF !important;
+  background-color: #03072A !important;
+}
+.footer a {
+  color: #FFF;
+}
+footer h5 {
+  color: #454545;
+}
+[class*="col-"] {
+  padding: 1rem;
+}

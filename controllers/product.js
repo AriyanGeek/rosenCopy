@@ -47,8 +47,8 @@ exports.createProduct = (req, res, next) => {
         error.statusCode = 422;
         throw error;
     }
-    if (!req.file[0]) {
-        const error = new Error('No image provided.');
+    if (!req.files['image1Url'][0]) {
+        const error = new Error('No image1 provided.');
         error.statusCode = 422;
         throw error;
     }
@@ -60,9 +60,9 @@ exports.createProduct = (req, res, next) => {
     const content = req.body.content;
     const contentDe = req.body.contentDe;
     const contentFr = req.body.contentFr;
-    const image1Url = req.file[0].path;
-    const image2Url = req.file[1].path;
-    const image3Url = req.file[2].path;
+    const image1Url = req.files['image1Url'][0].path;
+    const image2Url = req.files['image2Url'][0].path;
+    const image3Url = req.files['image3Url'][0].path;
     const product = new Product({
         name: name,
         nameDe: nameDe,
