@@ -33,7 +33,7 @@ export class HomeFrComponent implements OnInit {
       }
     );
     this.setTitle('Home');
-    this.selectedLang = 'EU';
+    this.selectedLang = 'FR';
 
   }
 

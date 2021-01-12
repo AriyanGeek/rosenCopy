@@ -13,6 +13,7 @@ import { TabViewModule } from 'primeng/tabview';
 import {ButtonModule} from 'primeng/button';
 import {RippleModule} from 'primeng/ripple';
 import {SidebarModule} from 'primeng/sidebar';
+import {GalleriaModule} from 'primeng/galleria';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -21,7 +22,6 @@ import { HomeComponent } from './home/en/home.component';
 import { HomeDeComponent } from './home/de/home-de.component';
 import { HomeFrComponent } from './home/fr//home-fr.component';
 import { AdminComponent } from './admin/admin.component';
-import { FoodComponent } from './food/food.component';
 import { RosenfarbeComponent } from './rosenfarbe/en/rosenfarbe.component';
 import { RosenfarbeDeComponent } from './rosenfarbe/de/rosenfarbe-de.component';
 import { RosenfarbeFrComponent } from './rosenfarbe/fr/rosenfarbe-fr.component';
@@ -44,9 +44,12 @@ import { SafranDeComponent } from './b2b/de/safran-de/safran-de.component';
 import { NusseDeComponent } from './b2b/de/nusse-de/nusse-de.component';
 import { SafranFrComponent } from './b2b/fr/safran-fr/safran-fr.component';
 import { NusseFrComponent } from './b2b/fr/nusse-fr/nusse-fr.component';
+import { GreenDeComponent } from './b2b/de/green-de/green-de.component';
+import { GreenComponent } from './b2b/en/green/green.component';
+import { GreenFrComponent } from './b2b/fr/green-fr/green-fr.component';
 
 const appRouts: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeDeComponent },
   { path: 'en', component: HomeComponent },
   { path: 'de', component: HomeDeComponent },
   { path: 'fr', component: HomeFrComponent },
@@ -65,11 +68,13 @@ const appRouts: Routes = [
   { path: 'en/nusse', component: NusseComponent },
   { path: 'de/nusse', component: NusseDeComponent },
   { path: 'fr/nusse', component: NusseFrComponent },
+  { path: 'en/green', component: GreenComponent },
+  { path: 'de/green', component: GreenDeComponent },
+  { path: 'fr/green', component: GreenFrComponent },
   { path: 'en/contact', component: ContactComponent },
   { path: 'de/contact', component: ContactDeComponent },
   { path: 'fr/contact', component: ContactFrComponent },
   { path: 'admin', component: LoginComponent },
-  { path: 'admin/foods', component: FoodComponent },
 ];
 
 @NgModule({
@@ -79,7 +84,6 @@ const appRouts: Routes = [
     HomeDeComponent,
     HomeFrComponent,
     AdminComponent,
-    FoodComponent,
     RosenfarbeComponent,
     RosenfarbeDeComponent,
     RosenfarbeFrComponent,
@@ -102,6 +106,9 @@ const appRouts: Routes = [
     NusseDeComponent,
     SafranFrComponent,
     NusseFrComponent,
+    GreenDeComponent,
+    GreenComponent,
+    GreenFrComponent,
   ],
   imports: [
     BrowserModule,
@@ -112,13 +119,14 @@ const appRouts: Routes = [
     DropdownModule,
     TabViewModule,
     // MDBBootstrapModule.forRoot(),
-    RouterModule.forRoot(appRouts),
+    RouterModule.forRoot(appRouts , {scrollPositionRestoration: 'enabled'}),
     HttpClientModule,
     NgbModule,
     HammerModule,
     ButtonModule,
     RippleModule,
-    SidebarModule
+    SidebarModule,
+    GalleriaModule
   ],
   providers: [],
   bootstrap: [

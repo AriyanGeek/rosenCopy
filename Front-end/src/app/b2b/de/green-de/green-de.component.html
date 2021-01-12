@@ -4,7 +4,7 @@
   <div class="container-fluid align-items-center d-none d-md-flex">
     <div class="logo ml-2 mr-3">
       <a href="index.html">
-        <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class=" img-fluid">
+        <img src="../../../../assets/img/logo1.png" alt="Rosenfarbe" class=" img-fluid">
       </a>
     </div>
 
@@ -13,16 +13,16 @@
         <li><a routerLink="/de">Home</a></li>
         <li ><a routerLink="/de/rosenfarbe">Rosenfarbe</a></li>
         <li><a routerLink="/de/shop">Shop</a></li>
-        <li class="active"><a href="">Produkte</a></li>
+        <li><a routerLink="/de/b2b">Produkte</a></li>
         <li><a routerLink="/de/contact">Kontakt</a></li>
 
         <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
           <ng-template pTemplate="selectedItem">
-            <img src="../../../assets/img/DE.png" style="height: 20px;width: 20px;" />
+            <img src="../../../../assets/img/DE.png" style="height: 20px;width: 20px;" />
           </ng-template>
           <ng-template let-lang pTemplate="item">
             <div class="lang-item" >
-                  <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+                  <img  src="../../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
 
                 </div>
           </ng-template>
@@ -42,17 +42,17 @@
       <button pButton pRipple routerLink="/de/b2b" type="button" label="Produkte" class="p-button-text d-block"></button>
       <button pButton pRipple routerLink="/de/contact" type="button" label="Kontakt" class="p-button-text d-block"></button>
 
-      <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="img-fluid mt-4">
+      <img src="../../../../assets/img/logo1.png" alt="Rosenfarbe" class="img-fluid mt-4">
 
     </p-sidebar>
-    <img src="../../../assets/img/logo1.png" alt="Rosenfarbe" class="mx-auto img-fluid" style="height: 45px;margin-left: 20px !important;">
+    <img src="../../../../assets/img/logo1.png" alt="Rosenfarbe" class="mx-auto img-fluid" style="height: 45px;margin-left: 20px !important;">
     <p-dropdown [options]="langs" [(ngModel)]="selectedLang" (onChange)="changeLang()" [style]="{'float': 'right'}">
       <ng-template pTemplate="selectedItem">
-        <img src="../../../assets/img/DE.png" style="height: 20px;width: 20px;" />
+        <img src="../../../../assets/img/DE.png" style="height: 20px;width: 20px;" />
       </ng-template>
       <ng-template let-lang pTemplate="item">
         <div class="lang-item" >
-              <img  src="../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
+              <img  src="../../../../assets/img/{{lang}}.png" style="height: 20px;width: 20px;" />
 
             </div>
       </ng-template>
@@ -60,47 +60,50 @@
   </div>
 </header>
 <!-- End Header -->
-<div class="section-7 box">
-  <div class="vertical-center text-center" style="position: relative;">
-    <h2 class="display-4" style="font-size: 90px;">Business to Business</h2>
-  </div>
-</div>
+<div class="section-4 box"></div>
+<div class="container-fluid text-center" style="background-color: #56433F; color: #E0E0E0;">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="mt-5">Grüne Pistazienkerne</h1>
+    </div>
+    <div class="col-md-1">
 
+    </div>
+    <div class="col-md-10">
+      <p class="p-text">Pistazienfrüchte werden ungefähr 5 Wochen vor der normalen Ernte gepflückt, um ihre Früchte zu grünen Kernen zu verarbeiten.</p>
+      <p class="p-text">Die Qualität und die grüne Farbe sowie die Größe definieren den ‚Grade’ der grünen Kerne, die von S bis H variieren.</p>
 
-<div class="container-fluid text-center" style="background-color: #AF854F; color: #000;">
-<div class="row">
-  <div class="col-md-4 mt-5 mb-5">
-    <a routerLink="/de/nusse">
+    </div>
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-12">
+      <hr class="mb-5" style="border-top: 2px solid #E0E0E0;">
+    </div>
+    <div class="col-md-6">
       <div class="card bg-dark text-white">
-        <img src="../../../assets/img/Nusse/p2.jpg" class="card-img" alt="...">
+        <img src="../../../../assets/img/Green/g1.jpg" class="card-img" alt="...">
         <div class="card-img-overlay">
-          <h5 class="card-title"><h2 style="font-size: 55px;">Pistazien</h2></h5>
+          <h5 class="card-title"><h2 style="font-size: 35px;">A</h2></h5>
         </div>
       </div>
-    </a>
-  </div>
-  <div class="col-md-4 mt-5 mb-5">
-    <a routerLink="/de/safran">
+    </div>
+    <div class="col-md-6">
       <div class="card bg-dark text-white">
-        <img src="../../../assets/img/Safran/Negin.jpg" class="card-img" alt="...">
+        <img src="../../../../assets/img/Green/g2.jpg" class="card-img" alt="...">
         <div class="card-img-overlay">
-          <h5 class="card-title"><h2 style="font-size: 55px;">Safran</h2></h5>
+          <h5 class="card-title"><h2 style="font-size: 35px;">B</h2></h5>
         </div>
       </div>
-    </a>
-  </div>
-  <div class="col-md-4 mt-5 mb-5">
-    <a routerLink="/de/green">
+    </div>
+    <div class="col-md-6">
       <div class="card bg-dark text-white">
-        <img src="../../../assets/img/Green/Green.jpg" class="card-img" alt="...">
+        <img src="../../../../assets/img/Green/g3.jpg" class="card-img" alt="...">
         <div class="card-img-overlay">
-          <h5 class="card-title"><h2 style="font-size: 45px;">Grüne Pistazienkerne</h2></h5>
+          <h5 class="card-title"><h2 style="font-size: 35px;">C</h2></h5>
         </div>
       </div>
-    </a>
+    </div>
   </div>
 </div>
-</div>
-
 <app-footer-de></app-footer-de>
-

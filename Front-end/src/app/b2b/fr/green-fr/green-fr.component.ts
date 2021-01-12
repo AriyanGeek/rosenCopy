@@ -1,20 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 import { Meta, Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+
 @Component({
-  selector: 'app-shop-fr',
-  templateUrl: './shop-fr.component.html',
-  styleUrls: ['./shop-fr.component.css']
+  selector: 'app-green-fr',
+  templateUrl: './green-fr.component.html',
+  styleUrls: ['./green-fr.component.css']
 })
-export class ShopFrComponent implements OnInit {
+export class GreenFrComponent implements OnInit {
   visibleSidebar;
   langs = ['EN','DE','FR'];
   selectedLang: string;
-  images: any[];
 
   constructor(
-    private http: HttpClient,
     private router: Router,
     private meta: Meta,
     private title: Title
@@ -27,11 +25,6 @@ export class ShopFrComponent implements OnInit {
     );
     this.setTitle('Home');
     this.selectedLang = 'FR';
-    this.images = [['../../../assets/img/c1.jpg','../../../assets/img/cb1.jpg'],
-    ['../../../assets/img/c3.jpg','../../../assets/img/cb3.jpg'],
-    ['../../../assets/img/c2.jpg','../../../assets/img/cb2.jpg'],
-    ['../../../assets/img/c4.jpg','../../../assets/img/cb4.jpg']
-  ]
 
   }
 
@@ -46,5 +39,4 @@ export class ShopFrComponent implements OnInit {
     this.router.navigate(['/' + (this.selectedLang.toLowerCase())]);
   }
 }
-
 

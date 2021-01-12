@@ -11,6 +11,7 @@ export class ShopComponent implements OnInit {
   visibleSidebar;
   langs = ['EN','DE','FR'];
   selectedLang: string;
+  images: any[];
 
   constructor(
     private http: HttpClient,
@@ -26,6 +27,11 @@ export class ShopComponent implements OnInit {
     );
     this.setTitle('Home');
     this.selectedLang = 'EU';
+    this.images = [['../../../assets/img/c1.jpg','../../../assets/img/cb1.jpg'],
+    ['../../../assets/img/c3.jpg','../../../assets/img/cb3.jpg'],
+    ['../../../assets/img/c2.jpg','../../../assets/img/cb2.jpg'],
+    ['../../../assets/img/c4.jpg','../../../assets/img/cb4.jpg']
+  ]
 
   }
 

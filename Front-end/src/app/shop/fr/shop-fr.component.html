@@ -84,16 +84,21 @@
       <hr style="border-top: 2px solid #E0E0E0;">
     </div>
     <div class="col-md-6">
-      <img src="../../../assets/img/c1.jpg" alt="" width="100%" onmouseover="hover1(this);" onmouseout="unhover1(this);">
+      <p-galleria [(value)]="images[0]" [showThumbnailNavigators]="false" [showThumbnails]="false" [containerStyle]="{'max-width': '640px'}" [showIndicators]="true" [changeItemOnIndicatorHover]="true" [showIndicatorsOnItem]="true">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item" style="width: 100%; display: block;" />
+        </ng-template>
+
+    </p-galleria>
     </div>
     <div class="col-md-6" id="p1">
       <h1>Pistaches<br>au<br>safran</h1>
       <p class="p-text">La pistache embrasse le safran.</p>
       <p class="p-text">Nos délicieuses pistaches sont délicatement grillées au safran, l'or des épices. Les saveurs créées par cette fusion de l'excellence caressent vos papilles d'une manière si unique que les mots sont bien trop faibles pour rendre justice à l'expérience.</p>
       <p class="p-text">Nous importons le safran pour nos pistaches directement d'un producteur du safran de la provence 'Khorasan' dans le nord-est de l'Iran.Servez ces pistaches au safran avec du whisky tout aussi exquis.</p>
-      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Temporairement indisponible" data-content="Notre Shop est en cours de développment et sera bientôt disponible">Acheter</a><br>
-      <a class="" href="#" data-toggle="modal" data-target="#Modal1" style="color: #E0E0E0;">Plus d'informations</a>
-      <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+      <a class="btn btn-lg btn-outline-light" data-toggle="modal" data-target="#ModalShop" title="Temporairement indisponible" data-content="Notre Shop est en cours de développment et sera bientôt disponible">Acheter</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal4" style="color: #E0E0E0;">Plus d'informations</a>
+      <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -103,7 +108,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <p>Poids net: 250g</p><br>
+              <p>Poids net: 200g</p><br>
 
               <table class="table">
                 <tbody>
@@ -142,7 +147,7 @@
                 </tbody>
               </table>
 
-              <p>Ingrédients: pistaches en coque 98%, sel de mer 2%, extrait de safran 2%</p>
+              <p>Ingrédients: pistaches en coque , sel de mer, extrait de safran</p>
               <p>Remarque pour les personnes allergiques: le produit peut contenir des traces d&#39;autres fruits à coque</p>
             </div>
             <div class="modal-footer">
@@ -158,9 +163,9 @@
     <div class="col-md-6" id="p3">
       <h1>Pistaches<br>au<br>citron</h1>
       <p class="p-text">Épicé, acidulé et rafraîchissant.<br>C'est ainsi que les connaisseurs décrivent nos pistaches au citron. Ce mélange creé dans notre torréfaction privée, va bien avec un gin tonic.<br>Inoubliable! </p>
-      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Temporairement indisponible" data-content="Notre Shop est en cours de développment et sera bientôt disponible">Acheter</a><br>
-      <a class="" href="#" data-toggle="modal" data-target="#Modal2" style="color: #E0E0E0;">Plus d'informations</a>
-      <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+      <a class="btn btn-lg btn-outline-light" data-toggle="modal" data-target="#ModalShop" title="Temporairement indisponible" data-content="Notre Shop est en cours de développment et sera bientôt disponible">Acheter</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal5" style="color: #E0E0E0;">Plus d'informations</a>
+      <div class="modal fade" id="Modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -170,7 +175,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <p>Poids net: 250g</p><br>
+              <p>Poids net: 200g</p><br>
 
               <table class="table">
                 <tbody>
@@ -209,7 +214,7 @@
                 </tbody>
               </table>
 
-              <p>Ingrédients: pistaches en coque 96%, sel de mer 2%, extrait de citron 2%</p>
+              <p>Ingrédients: pistaches en coque, sel de mer, extrait de citron</p>
               <p>Remarque pour les personnes allergiques: le produit peut contenir des traces d&#39;autres fruits à coque</p>
             </div>
             <div class="modal-footer">
@@ -220,21 +225,31 @@
       </div>
     </div>
     <div class="col-md-6">
-      <img src="../../../assets/img/c3.jpg" alt="" width="100%" onmouseover="hover3(this);" onmouseout="unhover3(this);">
+      <p-galleria [(value)]="images[1]" [showThumbnailNavigators]="false" [showThumbnails]="false" [containerStyle]="{'max-width': '640px'}" [showIndicators]="true" [changeItemOnIndicatorHover]="true" [showIndicatorsOnItem]="true">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item" style="width: 100%; display: block;" />
+        </ng-template>
+
+    </p-galleria>
     </div>
     <div class="col-12">
       <hr style="border-top: 2px solid #E0E0E0;">
     </div>
     <div class="col-md-6">
-      <img src="../../../assets/img/c2.jpg" alt="" width="100%" onmouseover="hover2(this);" onmouseout="unhover2(this);">
+      <p-galleria [(value)]="images[2]" [showThumbnailNavigators]="false" [showThumbnails]="false" [containerStyle]="{'max-width': '640px'}" [showIndicators]="true" [changeItemOnIndicatorHover]="true" [showIndicatorsOnItem]="true">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item" style="width: 100%; display: block;" />
+        </ng-template>
+
+    </p-galleria>
     </div>
     <div class="col-md-6" id="p2">
       <h1>Pistaches<br>au<br>sel rose</h1>
       <p class="p-text">La rencontre des gentils géants.<br>Dans cette composition, le goût unique de nos pistaches géantes persanes rencontre le sel minéral à l'origine des montagnes himalayennes fusionné ensemble dans une torréfaction précise</p>
       <p class="p-text">Ces pistaches salées sont idéales pour toute occasion. Vous pouves par exemple les essyer avec une bière! Exceptionnel!</p>
-      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Temporairement indisponible" data-content="Notre Shop est en cours de développment et sera bientôt disponible">Acheter</a><br>
-      <a class="" href="#" data-toggle="modal" data-target="#Modal3" style="color: #E0E0E0;">Plus d'informations</a>
-      <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+      <a class="btn btn-lg btn-outline-light" data-toggle="modal" data-target="#ModalShop" title="Temporairement indisponible" data-content="Notre Shop est en cours de développment et sera bientôt disponible">Acheter</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal6" style="color: #E0E0E0;">Plus d'informations</a>
+      <div class="modal fade" id="Modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -244,7 +259,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <p>Poids net: 250g</p><br>
+              <p>Poids net: 200g</p><br>
 
               <table class="table">
                 <tbody>
@@ -283,7 +298,7 @@
                 </tbody>
               </table>
 
-              <p>Ingrédients: pistaches en coque 98%, sel rose 2%</p>
+              <p>Ingrédients: pistaches en coque , sel rose</p>
               <p>Remarque pour les personnes allergiques: le produit peut contenir des traces d&#39;autres fruits à coque</p>
             </div>
             <div class="modal-footer">
@@ -297,22 +312,22 @@
       <hr style="border-top: 2px solid #E0E0E0;">
     </div>
     <div class="col-md-6" id="p4">
-      <h1>Mélange de noix<br>au<br>sel de mer</h1>
-      <p class="p-text">Variété salée.</p>
-      <p class="p-text">Les noix de cette création viennent du monde entier. Pistaches persanes, noix de cajou vietnamiennes, amandes espagnoles, noisettes géorgiennes et macadamia sud-africaine combinées grâce à la puissance de la torréfaction et raffinées avec du sel de mer.</p>
-      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Temporairement indisponible" data-content="Notre Shop est en cours de développment et sera bientôt disponible">Acheter</a><br>
-      <a class="" href="#" data-toggle="modal" data-target="#Modal4" style="color: #E0E0E0;">Plus d'informations</a>
-      <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+      <h1>Pistaches<br>Torréfié Pur</h1>
+      <p class="p-text">Seulement rôti!<br>
+        Sans sel, pour profiter du goût doux des pistaches pures.</p>
+      <a class="btn btn-lg btn-outline-light" data-toggle="modal" data-target="#ModalShop" title="Temporairement indisponible" data-content="Notre Shop est en cours de développment et sera bientôt disponible">Acheter</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal7" style="color: #E0E0E0;">Plus d'informations</a>
+      <div class="modal fade" id="Modal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Mélange de noix</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Pistaches</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>Poids net: 250g</p><br>
+              <p>Poids net: 200g</p><br>
 
               <table class="table">
                 <tbody>
@@ -322,7 +337,7 @@
                   </tr>
                   <tr>
                     <td style="text-align: left;">Valeur énergétique</td>
-                    <td style="text-align: right;">2719,6 kJ/650 kcal</td>
+                    <td style="text-align: right;">2721,4 kJ/650 kcal</td>
                   </tr>
                   <tr>
                     <td style="text-align: left;">Matière Grasse</td>
@@ -346,13 +361,12 @@
                   </tr>
                   <tr>
                     <td style="text-align: left;">Sel</td>
-                    <td style="text-align: right;">1,5 g</td>
+                    <td style="text-align: right;">0,01 g</td>
                   </tr>
                 </tbody>
               </table>
 
-              <p>Ingrédients: Mélange de noix avec différentes proportions de poids composé de pistaches, noix de cajou, amandes, noisettes et noix, sel de mer 1,5%</p>
-              <p>Remarque pour les personnes allergiques: le produit peut contenir des traces d&#39;autres fruits à coque</p>
+              <p>Ingrédients: pistaches en coque</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -362,12 +376,34 @@
       </div>
     </div>
     <div class="col-md-6">
-      <img src="../../../assets/img/c4.jpg" alt="" width="100%" onmouseover="hover4(this);" onmouseout="unhover4(this);">
+      <p-galleria [(value)]="images[3]" [showThumbnailNavigators]="false" [showThumbnails]="false" [containerStyle]="{'max-width': '640px'}" [showIndicators]="true" [changeItemOnIndicatorHover]="true" [showIndicatorsOnItem]="true">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item" style="width: 100%; display: block;" />
+        </ng-template>
+
+    </p-galleria>
     </div>
     <div class="col-12">
       <hr style="border-top: 2px solid #E0E0E0;">
     </div>
   </div>
 </div>
-
+<div class="modal fade" id="ModalShop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Temporairement indisponible</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Notre Shop est en cours de développment et sera bientôt disponible</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
 <app-footer-fr></app-footer-fr>

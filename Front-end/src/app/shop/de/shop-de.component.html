@@ -84,16 +84,21 @@
       <hr style="border-top: 2px solid #E0E0E0;">
     </div>
     <div class="col-md-6">
-      <img src="../../../assets/img/c1.jpg" alt="" width="100%" onmouseover="hover1(this);" onmouseout="unhover1(this);">
+      <p-galleria [(value)]="images[0]" [showThumbnailNavigators]="false" [showThumbnails]="false" [containerStyle]="{'max-width': '640px'}" [showIndicators]="true" [changeItemOnIndicatorHover]="true" [showIndicatorsOnItem]="true">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item" style="width: 100%; display: block;" />
+        </ng-template>
+
+    </p-galleria>
     </div>
     <div class="col-md-6" id="p1">
       <h1>Pistazien<br>Safran</h1>
       <p class="p-text">Pistazie küsst Safran.</p>
       <p class="p-text">Unsere erlesenen Pistazien werden schonend mit Safran, dem Gold der Gewürze, geröstet.</p>
       <p class="p-text">Die durch diese Fusion von Exzellenz entstehenden Aromen umschmeicheln Ihre Geschmacksknospen auf so einzigartige Weise, dass Worte viel zu schwach sind, um diesem Erlebnis gerecht werden zu können. Den Safran für unsere Pistazien importieren wir direkt vom Erzeuger in der 'Chorasan' Provinz im Nordosten des Irans. Reichen Sie beispielsweise unsere Pistazien mit Safran zu einem ebenso erlesenen Whisky! </p>
-      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Zurzeit nicht verfügbar" data-content="Shop wird entwickelt und wird bald verfügbar sein">kaufen</a><br>
-      <a class="" href="#" data-toggle="modal" data-target="#Modal1" style="color: #E0E0E0;">Mehr Info</a>
-      <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+      <a class="btn btn-lg btn-outline-light" data-toggle="modal" data-target="#ModalShop" title="Zurzeit nicht verfügbar" data-content="Shop wird entwickelt und wird bald verfügbar sein">kaufen</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal4" style="color: #E0E0E0;">Mehr Info</a>
+      <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -103,7 +108,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <p>Nettogewicht: 250g</p><br>
+              <p>Nettogewicht: 200g</p><br>
 
               <table class="table">
                 <tbody>
@@ -142,7 +147,7 @@
                 </tbody>
               </table>
 
-              <p>Zutaten: Pistazien mit Schale 96%, Meersalz 2%, Safranextrakt 2%</p>
+              <p>Zutaten: Pistazien mit Schale, Meersalz, Safranextrakt</p>
               <p>Hinweis für Allergiker: Das Produkt kann Spuren von anderen Schalenfrüchten enthalten</p>
             </div>
             <div class="modal-footer">
@@ -159,9 +164,9 @@
       <h1>Pistazien<br>Zitrone</h1>
       <p class="p-text">Würzig, spritzig und erfrischend. So beschreiben Kenner unsere Pistazien mit Zitrone.</p>
       <p class="p-text">Dieser in unserer Privatrösterei in liebevoller Handarbeit geschaffene Meilenstein des Genusses passt gut zu einem Gin Tonic.<br>Unvergesslich! </p>
-      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Zurzeit nicht verfügbar" data-content="Shop wird entwickelt und wird bald verfügbar sein">kaufen</a><br>
-      <a class="" href="#" data-toggle="modal" data-target="#Modal2" style="color: #E0E0E0;">Mehr Info</a>
-      <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+      <a class="btn btn-lg btn-outline-light" data-toggle="modal" data-target="#ModalShop" title="Zurzeit nicht verfügbar" data-content="Shop wird entwickelt und wird bald verfügbar sein">kaufen</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal5" style="color: #E0E0E0;">Mehr Info</a>
+      <div class="modal fade" id="Modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -171,7 +176,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <p>Nettogewicht: 250g</p><br>
+              <p>Nettogewicht: 200g</p><br>
 
               <table class="table">
                 <tbody>
@@ -210,7 +215,7 @@
                 </tbody>
               </table>
 
-              <p>Zutaten: Pistazien mit Schale 96%, Meersalz 2%, Zitronenextrakt 2%</p>
+              <p>Zutaten: Pistazien mit Schale, Meersalz, Zitronenextrakt</p>
               <p>Hinweis für Allergiker: Das Produkt kann Spuren von anderen Schalenfrüchten enthalten</p>
             </div>
             <div class="modal-footer">
@@ -221,21 +226,31 @@
       </div>
     </div>
     <div class="col-md-6">
-      <img src="../../../assets/img/c3.jpg" alt="" width="100%" onmouseover="hover3(this);" onmouseout="unhover3(this);">
+      <p-galleria [(value)]="images[1]" [showThumbnailNavigators]="false" [showThumbnails]="false" [containerStyle]="{'max-width': '640px'}" [showIndicators]="true" [changeItemOnIndicatorHover]="true" [showIndicatorsOnItem]="true">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item" style="width: 100%; display: block;" />
+        </ng-template>
+
+    </p-galleria>
     </div>
     <div class="col-12">
       <hr style="border-top: 2px solid #E0E0E0;">
     </div>
     <div class="col-md-6">
-      <img src="../../../assets/img/c2.jpg" alt="" width="100%" onmouseover="hover2(this);" onmouseout="unhover2(this);">
+      <p-galleria [(value)]="images[2]" [showThumbnailNavigators]="false" [showThumbnails]="false" [containerStyle]="{'max-width': '640px'}" [showIndicators]="true" [changeItemOnIndicatorHover]="true" [showIndicatorsOnItem]="true">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item" style="width: 100%; display: block;" />
+        </ng-template>
+
+    </p-galleria>
     </div>
     <div class="col-md-6" id="p2">
       <h1>Pistazien<br>Rosa Salz</h1>
       <p class="p-text">Das Treffen der sanften Giganten.<br>Bei dieser Komposition trifft der einzigartige Geschmack unserer persischen Riesenpistazien auf das ursprünglich mineralische Salz des Himalaya-Gebirges in punktgenauer Röstung miteinander verschmolzen.</p>
       <p class="p-text">Herausragend!</p>
-      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Zurzeit nicht verfügbar" data-content="Shop wird entwickelt und wird bald verfügbar sein">kaufen</a><br>
-      <a class="" href="#" data-toggle="modal" data-target="#Modal3" style="color: #E0E0E0;">Mehr Info</a>
-      <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+      <a class="btn btn-lg btn-outline-light" data-toggle="modal" data-target="#ModalShop" title="Zurzeit nicht verfügbar" data-content="Shop wird entwickelt und wird bald verfügbar sein">kaufen</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal6" style="color: #E0E0E0;">Mehr Info</a>
+      <div class="modal fade" id="Modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -245,7 +260,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <p>Nettogewicht: 250g</p><br>
+              <p>Nettogewicht: 200g</p><br>
 
               <table class="table">
                 <tbody>
@@ -284,7 +299,7 @@
                 </tbody>
               </table>
 
-              <p>Zutaten: Pistazien mit Schale 98%, Rosa Salz 2%</p>
+              <p>Zutaten: Pistazien mit Schale , Rosa Salz</p>
               <p>Hinweis für Allergiker: Das Produkt kann Spuren von anderen Schalenfrüchten enthalten</p>
             </div>
             <div class="modal-footer">
@@ -298,22 +313,22 @@
       <hr style="border-top: 2px solid #E0E0E0;">
     </div>
     <div class="col-md-6" id="p4">
-      <h1>Nuss Mix<br>Meersalz</h1>
-      <p class="p-text">Gesalzene Vielfalt.</p>
-      <p class="p-text">Die Nüsse dieser Kreation stammen aus allen Teilen der Welt. Persische Pistazienkerne, vietnamesische Cashewkerne, spanische Mandel, georgische Haselnüsse und südafrikanische Macadamia vereint durch die Kraft der Röstung und verfeinert mit Meersalz.</p>
-      <a class="btn btn-lg btn-outline-light" data-toggle="popover" title="Zurzeit nicht verfügbar" data-content="Shop wird entwickelt und wird bald verfügbar sein">kaufen</a><br>
-      <a class="" href="#" data-toggle="modal" data-target="#Modal4" style="color: #E0E0E0;">Mehr Info</a>
-      <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+      <h1>Pistazien<br>Pur Geröstet</h1>
+      <p class="p-text">Nur geröstet!<br>
+        Ohne Salz, um den milden geschmack von puren pistazien zu geniessen.</p>
+      <a class="btn btn-lg btn-outline-light" data-toggle="modal" data-target="#ModalShop" title="Zurzeit nicht verfügbar" data-content="Shop wird entwickelt und wird bald verfügbar sein">kaufen</a><br>
+      <a class="" href="#" data-toggle="modal" data-target="#Modal7" style="color: #E0E0E0;">Mehr Info</a>
+      <div class="modal fade" id="Modal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Nuss Mix</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Pistazien</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>Nettogewicht: 250g</p><br>
+              <p>Nettogewicht: 200g</p><br>
 
               <table class="table">
                 <tbody>
@@ -323,7 +338,7 @@
                   </tr>
                   <tr>
                     <td style="text-align: left;">Energiewert</td>
-                    <td style="text-align: right;">2719,6 kJ/650 kcal</td>
+                    <td style="text-align: right;">2721,4 kJ/650 kcal</td>
                   </tr>
                   <tr>
                     <td style="text-align: left;">Fett</td>
@@ -347,13 +362,12 @@
                   </tr>
                   <tr>
                     <td style="text-align: left;">Salz</td>
-                    <td style="text-align: right;">1,5 g</td>
+                    <td style="text-align: right;">0,01 g</td>
                   </tr>
                 </tbody>
               </table>
 
-              <p>Zutaten: Nussmischung mit verschiedenen Gewichtsanteilen bestehend aus Pistazienkernen, Cashew-Kernen, Mandeln, Haselnüssen und Macadamia, Meersalz 1,5%</p>
-              <p>Hinweis für Allergiker: Das Produkt kann Spuren von anderen Schalenfrüchten enthalten</p>
+              <p>Zutaten: Pistazien mit Schale</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">schließen</button>
@@ -363,7 +377,12 @@
       </div>
     </div>
     <div class="col-md-6">
-      <img src="../../../assets/img/c4.jpg" alt="" width="100%" onmouseover="hover4(this);" onmouseout="unhover4(this);">
+      <p-galleria [(value)]="images[3]" [showThumbnailNavigators]="false" [showThumbnails]="false" [containerStyle]="{'max-width': '640px'}" [showIndicators]="true" [changeItemOnIndicatorHover]="true" [showIndicatorsOnItem]="true">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item" style="width: 100%; display: block;" />
+        </ng-template>
+
+    </p-galleria>
     </div>
     <div class="col-12">
       <hr style="border-top: 2px solid #E0E0E0;">
@@ -371,3 +390,21 @@
   </div>
 </div>
 <app-footer-de></app-footer-de>
+<div class="modal fade" id="ModalShop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #000;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Zurzeit nicht verfügbar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Shop wird entwickelt und wird bald verfügbar sein</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">schließen</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+
 @Component({
-  selector: 'app-b2b-fr',
-  templateUrl: './b2b-fr.component.html',
-  styleUrls: ['./b2b-fr.component.css']
+  selector: 'app-green',
+  templateUrl: './green.component.html',
+  styleUrls: ['./green.component.css']
 })
-export class B2bFrComponent implements OnInit {
+export class GreenComponent implements OnInit {
   visibleSidebar;
   langs = ['EN','DE','FR'];
   selectedLang: string;
@@ -23,7 +24,7 @@ export class B2bFrComponent implements OnInit {
       }
     );
     this.setTitle('Home');
-    this.selectedLang = 'FR';
+    this.selectedLang = 'EN';
 
   }
 
@@ -38,6 +39,3 @@ export class B2bFrComponent implements OnInit {
     this.router.navigate(['/' + (this.selectedLang.toLowerCase())]);
   }
 }
-
-
-
